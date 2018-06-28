@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Geometria";
+    background-color: #f0f4f7;
+    color: #1f2847;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.container {
+    width: 1169px;
+    margin: 0 auto;
+    padding: 0;
+}
+header  {
+    height: 916px;
+    background-color: #1f2847;
+    box-shadow: inset 102px 102px 204px 15px rgba(23,31,58,1),
+                inset -102px 102px 204px 15px rgba(23,31,58,1);
+}
+.menu a {
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+.menu a:hover {
+    color: #b998ef;
+}
+.logoWords span{
+    font-size: 19px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.logoWords span:nth-child(1), .companyName span:nth-child(1){
+    color: #6981f1;
+}
+.logoWords span:nth-child(2), .companyName span:nth-child(2){
+    color: #b998ef;
+}
+.logoWords span:nth-child(3), .companyName span:nth-child(3){
+    color: #49d5fe;
+}
+.connect a, .connect span {
+    color: #49d5fe;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+.connect a{
+    text-transform: uppercase;
+}
+.connect {
+    border: 1px solid #49d5fe;
+}
+.companyName span {
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 54px;
+}
+h1 {
+    font-size: 33px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.bannerConnect span, .bannerConnect a{
+    font-size: 18px;
+}
+.rates{
+    height: 927px;
+}
+.firstLine {
+    font-weight: 500;
+    font-size: 17px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.secondLine {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 27px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.ratesItems .cardName{
+    font-size: 17px;
+    font-weight: 500;
+}
+.cardHeader1{
+    color: #6e87fa;
+}
+.cardHeader2{
+    color: #858eff;
+}
+.cardHeader3 {
+    color: #af82f6;
+}
+.cardHeader4 {
+    color: #4fceff;
+}
+.card .percent  {
+    font-family: Roboto;
+    font-weight: 900;
+}
+.card .percent span {
+    font-size: 45px;
+    color: #000;
+}
+.card  .percent span>span {
+    font-size: 15px;
+}
+.card .itemsContent span {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 48px;
+}
+.card .upgrade span  {
+    font-weight: 700;
+}
+.card .upgrade span>span{
+    font-size: 21px;
+}
+.card .upgrade  a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 54px;
+    font-weight: 700;
+}
+.card:nth-child(1) .upgrade a {
+    background-color: #637ae2;
+}
+.card:nth-child(2) .upgrade a {
+    background-color: #858eff;
+}
+.card:nth-child(3) .upgrade a {
+    background-color: #af82f6;
+}
+.card:nth-child(4) .upgrade a {
+    background-color: #4fceff;
+}
+.card:nth-child(1) .upgrade span {
+     color: #5a6fcf;
+ }
+.card:nth-child(2) .upgrade span {
+    color: #6a86f1;
+}
+.card:nth-child(3) .upgrade span{
+    color: #a773f7;
+}
+.card:nth-child(4) .upgrade span {
+    color: #33c1f7;
+}
+.calculator {
+    height: 785px;
+    background: linear-gradient(to left, #359ccb, #6b4fbf);
+}
+.calculator h2 {
+    color: #ffffff;
+    font-size: 37px;
+    line-height: 54px;
+}
+.calculator h4 {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 54px;
+    text-transform: uppercase;
+}
+.calculator h3 {
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 54px;
+    text-transform: uppercase;
+}
+.calculator .profit span {
+    font-size: 70px;
+    line-height: 34px;
+    color: #858eff;
+    font-family: Roboto;
+    font-weight: 900;
+}
+.calc_right .connect span,.affiliate .connect span {
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 54px;
+}
+.calc_right .connect span+a,.affiliate .connect span+a {
+    font-weight: 700;
+    color: #ffffff;
+}
+.calc_right .connect,.affiliate .connect {
+    border: 1px solid #858eff;
+}
+.certificate  {
+    background-color: #ffffff;
+    height: 742px;
+}
+.certificate .certTitle>span {
+    font-size: 177px;
+    line-height: 54px;
+    font-weight: 800;
+}
+.certificate h2 {
+    font-size: 33px;
+    line-height: 54px;
+    text-transform: uppercase;
+}
+
+.certificate p {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 30px;
+}
+.certificate p>span {
+    font-weight: 700;
+}
+.certificate img {
+    border: 1px solid #1f2847;
+    padding: 30px;
+}
+.advantages {
+    height: 1167px;
+    background-color: #f0f4f7;
+}
+.advantages h2, .advantages h4 {
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.advantages p {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 30px;
+}
+.advantages h3 {
+    font-family: Roboto;
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: 400;
+}
+.advantages .logoWords span {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 19px;
+}
+.advantages ul span:not([class^="icon"]){
+    font-size: 15px;
+    line-height: 24px;
+    font-family: Roboto;
+    font-weight: 700;
+}
+.advantages span[class^="icon"]{
+    font-size: 43px;
+}
+.affiliate {
+    background: linear-gradient(to left, #359ccb, #6b4fbf);
+    height: 799px;
+}
+.affiliate h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 33px;
+    line-height: 30px;
+}
+.affItems p {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 22px;
+    color: #ffffff;
+}
+.affItems p>span {
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 36px;
+}
+.affiliate .connect span {
+    color: #ffffff;
+}
+.news {
+    height: 969px;
+    background-color: #ffffff;
+}
+.news h2 {
+    text-transform: uppercase;
+    font-size: 33px;
+    line-height: 30px;
+}
+.news h4 {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.date {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.news h3 {
+    font-size: 17px;
+    line-height: 27px;
+    font-family: Roboto;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.news .current_news {
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 367px;
+    background-position: right center;
+}
+.news .current_news h3 {
+    color: #ffffff;
+}
+.news p {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 20px;
+    color: #6e7383;
+}
+.news a {
+    color: #49d5fe;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.news .current_news p {
+    line-height: 20px;
+}
+.news span:not([class^="date"]) {
+    color: #b4c1d2;
+    font-size: 13px;
+    line-height: 24px;
+}
+.news .news_list span.month {
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+}
+.payments {
+    background: linear-gradient(to left, #359ccb, #6b4fbf);
+    height: 390px;
+}
+footer .connect *{
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 54px;
+}
+.footerInfo {
+    font-size: 15px;
+    line-height: 25px;
+    color: #bbc0d2;
+}
+.social span {
+    line-height: 22px;
+}
+.footerInfoTitle {
+    font-size: 14px;
+    line-height: 25px;
+    font-family: Roboto;
+    font-weight: 700;
+}
+footer .address .row1 {
+    color: #6981f1;
+}
+footer .social .row2 {
+    color: #a489d9;
+}
+footer .social .row3 {
+    color: #49d5fe;
+}
