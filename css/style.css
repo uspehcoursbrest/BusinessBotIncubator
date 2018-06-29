@@ -58,17 +58,24 @@ header  {
 .logoWords span:nth-child(3), .companyName span:nth-child(3){
     color: #49d5fe;
 }
-.connect a, .connect span {
+.icon-telegram{
+     color: #49d5fe;
+ }
+.connect a{
     color: #49d5fe;
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
-}
-.connect a{
     text-transform: uppercase;
+}
+.banner .connect>*{
+    font-size: 18px;
 }
 .connect {
     border: 1px solid #49d5fe;
+}
+.connectWhite {
+    border: 1px  solid #858eff;
 }
 .companyName span {
     font-weight: 900;
@@ -80,9 +87,6 @@ div+h1 {
     line-height: 60px;
     font-weight: 700;
     color: #ffffff;
-}
-.bannerConnect span, .bannerConnect a{
-    font-size: 18px;
 }
 .rates{
     height: 927px;
@@ -198,17 +202,15 @@ div+h1 {
     font-family: Roboto;
     font-weight: 900;
 }
-.calc_right .connect span,.affiliate .connect span {
-    color: #ffffff;
+.connectWhite>*{
     font-size: 21px;
     line-height: 54px;
-}
-.calc_right .connect span+a,.affiliate .connect span+a {
-    font-weight: 700;
     color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
 }
-.calc_right .connect,.affiliate .connect {
-    border: 1px solid #858eff;
+.connectWhite a{
+    font-weight: 700;
 }
 .certificate  {
     background-color: #ffffff;
@@ -272,11 +274,11 @@ div+h1 {
 .advantages span[class^="icon"]{
     font-size: 43px;
 }
-.affiliate {
+.partnersProgram {
     background: linear-gradient(to left, #359ccb, #6b4fbf);
     height: 799px;
 }
-.affiliate h2 {
+.partnersProgram h2 {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 33px;
@@ -292,9 +294,6 @@ div+h1 {
     font-weight: 700;
     font-size: 33px;
     line-height: 36px;
-}
-.affiliate .connect span {
-    color: #ffffff;
 }
 .news {
     height: 969px;
@@ -423,4 +422,12 @@ h1{
 }
 .newsMore p{
     line-height: 22px;
-}
+}.affiliate {
+     background-color: #f0f4f7;
+ }
+ .referralItems{
+     background-color: #1f2847;
+ }
+ .referralItems  p {
+     color: #9da4bd;
+ }
