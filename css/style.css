@@ -7,96 +7,245 @@ body {
     font-family: "Geometria";
     background-color: #f0f4f7;
     color: #1f2847;
+    max-width: 1920px;
+    min-width: 1200px;
+}
+.bodyWrap{
+    overflow: hidden
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
-ul{
+
+ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
-.cfix::after{
+
+.cfix::after {
     content: '';
     display: block;
     clear: both;
 }
+
 .container {
     width: 1169px;
     margin: 0 auto;
     padding: 0;
+
 }
-header  {
-    height: 916px;
-    background-color: #1f2847;
-    box-shadow: inset 102px 102px 204px 15px rgba(23,31,58,1),
-                inset -102px 102px 204px 15px rgba(23,31,58,1);
+/*Хэдер начало*/
+header {
+    height: 1040px;
+    background: rgb(62, 80, 141); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(62, 80, 141, 1) 0%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 88%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(62, 80, 141, 1) 0%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 88%); /* Chrome10-25,Safari5.1-6 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e508d', endColorstr='#18203b', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+    background: url("../img/png/hand_header.png") no-repeat left bottom,
+    url("../img/png/left_line3.png") no-repeat left -573px top -200px,
+    url("../img/png/hand_header.png") no-repeat left bottom,
+    url("../img/png/left_line2.png") no-repeat left -607px top -238px,
+    url("../img/png/left_line1.png") no-repeat left -733px top -272px,
+    url("../img/png/header_left_lines.png") no-repeat left bottom -28px,
+    url("../img/png/header_right_lines.png") no-repeat right bottom -159px,
+    radial-gradient(ellipse at center, rgba(62, 80, 141, 1) 0%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.logo{
+    margin-top: 45px;
+}
+.menu{
+    margin-top: 81px;
+}
+.logo>*{
+    float: left;
+}
+.logoWords{
+    margin-left: 20px;
+}
+.logoWords span:nth-child(1), .companyName span:nth-child(1) {
+    color: #6981f1;
+}
+
+.logoWords span:nth-child(2), .companyName span:nth-child(2) {
+    color: #b998ef;
+}
+
+.logoWords span:nth-child(3), .companyName span:nth-child(3) {
+    color: #49d5fe;
+}
+
+.topHeader>*{
+    float: left;
+    vertical-align: center;
 }
 .menu a {
     font-size: 14px;
-    line-height: 17px;
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
 }
+.menu li {
+    display: inline-block;
+    padding: 7px 20px;
+    position: relative;
+    margin-left: 30px;
+}
+/*Ховер у меню*/
 .menu a:hover {
     color: #b998ef;
 }
 
-.logoWords span{
+.menu a:hover::before{
+    display: block;
+    content: '';
+    position: absolute;
+    border: 1px solid #b998ef;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    width: 17px;
+    height: 17px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    color: #b998ef;
+}
+.menu a:hover::after{
+    display: block;
+    content: '';
+    position: absolute;
+    border: 1px solid #b998ef;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    width: 17px;
+    height: 17px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+/*Ховер у меню конец*/
+
+.logoWords span {
     font-size: 19px;
     line-height: 20px;
     font-weight: 500;
 }
-.logoWords span:nth-child(1), .companyName span:nth-child(1){
-    color: #6981f1;
+.lang{
+    width: 97px;
+    height: 33px;
+    background:no-repeat #2f3753  left  5px top 6px;
+    border: 1px solid #4e566e;
+
 }
-.logoWords span:nth-child(2), .companyName span:nth-child(2){
-    color: #b998ef;
+.topHeader .connect{
+    position: relative;
+    padding: 11px 18px 11px 44px;
 }
-.logoWords span:nth-child(3), .companyName span:nth-child(3){
+.topHeader span[class='icon-telegram']{
+    position: absolute;
+    left:16px;
+}
+
+.icon-telegram {
     color: #49d5fe;
 }
-.icon-telegram{
-     color: #49d5fe;
- }
-.connect a{
+.langConnect>*{
+    display: block;
+}
+.connect a {
     color: #49d5fe;
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
 }
-.banner .connect>*{
+
+.banner .connect > * {
     font-size: 18px;
 }
+
 .connect {
     border: 1px solid #49d5fe;
 }
+
 .connectWhite {
-    border: 1px  solid #858eff;
+    border: 1px solid #858eff;
 }
+
 .companyName span {
     font-weight: 900;
     font-size: 120px;
     line-height: 54px;
 }
-div+h1 {
+
+div + h1 {
     font-size: 33px;
     line-height: 60px;
     font-weight: 700;
     color: #ffffff;
 }
-.rates{
-    height: 927px;
+
+/*Хэдер конец*/
+
+/*3 блока выбора линий начало*/
+.lineItems {
+    height: 152px;
+    margin-top: -130px;
+    display: table;
+    width: 100%;
 }
+.line {
+    display: table-cell;
+    width: 33.3333%;
+    cursor: pointer;
+
+    height: inherit;
+    text-align: center;
+    padding-top: 42px;
+    -webkit-box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
+    position: relative;
+    z-index: 4;
+}
+
+.line:nth-child(1):after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 22px;
+    z-index: 3;
+    left: 50%;
+    background: url("../img/png/main_header_lines_right2.png")no-repeat,
+    url("../img/png/main_header_lines_right5.png") no-repeat;
+    height: 347px;
+    width: 1628px;
+}
+
+.line span {
+    display: block;
+}
+
+.line:nth-child(1) {
+    background-color: #6980f0;
+}
+
+.line:nth-child(2) {
+    background-color: #af82f6;
+}
+
+.line:nth-child(3) {
+    background-color: #4fceff;
+}
+
 .firstLine {
     font-weight: 500;
     font-size: 17px;
     color: #ffffff;
     text-transform: uppercase;
 }
+
 .secondLine {
     font-weight: 700;
     font-size: 21px;
@@ -104,45 +253,108 @@ div+h1 {
     color: #ffffff;
     text-transform: uppercase;
 }
-.ratesItems .cardName{
+/*3 блока выбора линий конец*/
+
+/*4 блока с тарифами начало*/
+.rates {
+    height: 927px;
+}
+.ratesItems {
+    margin-top: -22px;
+    background-color: #f0f4f7;
+}
+.itemsContent{
+    display: grid;
+    grid-template-rows: repeat(3,1fr) 134px;
+}
+.card {
+    border:  1px solid #cfd7dd;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 138px 121px auto;
+    text-align: center;
+}
+.cardsWrapper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(539px,max-content);
+    grid-gap: 31px;
+    margin-top: 132px;
+}.card span{
+     vertical-align: middle;
+ }
+ .itemsContent>div:nth-child(odd){
+     background-color: #f0f4f7;
+ }
+ .upgrade div{
+     width: 232px;
+     height: 50px;
+     margin: auto;
+ }
+ .card:nth-child(1) .upgrade div{
+     background-color: #637ae2;
+ }
+.ratesItems .cardName {
     font-size: 17px;
     font-weight: 500;
 }
-.cardHeader1{
+.ratesItems span[class='icon-robot']{
+    font-size: 60px;
+    margin-top: 16px;
+}
+.cardHeader{
+    background-color: #1f2847;
+    display: grid;
+ }
+.card:first-child .cardHeader{
     color: #6e87fa;
 }
-.cardHeader2{
+
+.card:nth-child(2) .cardHeader {
     color: #858eff;
 }
-.cardHeader3 {
+
+.card:nth-child(3) .cardHeader {
     color: #af82f6;
 }
-.cardHeader4 {
+.card:nth-child(4) .cardHeader {
     color: #4fceff;
+}
+
+.card {
+    float: left;
+    display: block;
 }
 .card .percent  {
     font-family: Roboto;
     font-weight: 900;
+    padding: 30px;
 }
+
 .card .percent span {
     font-size: 45px;
     color: #000;
 }
-.card  .percent span>span {
+
+.card .percent span > span {
     font-size: 15px;
 }
+
 .card .itemsContent span {
     font-family: Roboto;
     font-size: 15px;
     line-height: 48px;
 }
-.card .upgrade span  {
+
+.card .upgrade span {
     font-weight: 700;
 }
-.card .upgrade span>span{
+
+.card .upgrade span > span {
     font-size: 21px;
 }
-.card .upgrade  a {
+
+.card .upgrade a {
     text-decoration: none;
     color: #ffffff;
     text-transform: uppercase;
@@ -150,51 +362,52 @@ div+h1 {
     line-height: 54px;
     font-weight: 700;
 }
-.card:nth-child(1) .upgrade a {
-    background-color: #637ae2;
-}
-.card:nth-child(2) .upgrade a {
-    background-color: #858eff;
-}
-.card:nth-child(3) .upgrade a {
-    background-color: #af82f6;
-}
-.card:nth-child(4) .upgrade a {
-    background-color: #4fceff;
-}
+
+
+
 .card:nth-child(1) .upgrade span {
-     color: #5a6fcf;
- }
+    color: #5a6fcf;
+}
+
 .card:nth-child(2) .upgrade span {
     color: #6a86f1;
 }
-.card:nth-child(3) .upgrade span{
+
+.card:nth-child(3) .upgrade span {
     color: #a773f7;
 }
+
 .card:nth-child(4) .upgrade span {
     color: #33c1f7;
 }
+/*4 блока с тарифами конец*/
+
+/*Калькулятор начало*/
 .calculator {
     height: 785px;
     background: linear-gradient(to left, #359ccb, #6b4fbf);
 }
+
 .calculator h2 {
     color: #ffffff;
     font-size: 37px;
     line-height: 54px;
 }
+
 .calculator h4 {
     color: #ffffff;
     font-size: 14px;
     line-height: 54px;
     text-transform: uppercase;
 }
+
 .calculator h3 {
     color: #ffffff;
     font-size: 21px;
     line-height: 54px;
     text-transform: uppercase;
 }
+
 .calculator .profit span {
     font-size: 70px;
     line-height: 34px;
@@ -202,25 +415,32 @@ div+h1 {
     font-family: Roboto;
     font-weight: 900;
 }
-.connectWhite>*{
+
+.connectWhite > * {
     font-size: 21px;
     line-height: 54px;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
 }
-.connectWhite a{
+
+.connectWhite a {
     font-weight: 700;
 }
-.certificate  {
+/*Калькулятор конец*/
+
+/*Сертификат начало*/
+.certificate {
     background-color: #ffffff;
     height: 742px;
 }
-.certificate .certTitle>span {
+
+.certificate .certTitle > span {
     font-size: 177px;
     line-height: 54px;
     font-weight: 800;
 }
+
 .certificate h2 {
     font-size: 33px;
     line-height: 54px;
@@ -233,82 +453,106 @@ div+h1 {
     font-size: 17px;
     line-height: 30px;
 }
-.certificate p>span {
+
+.certificate p > span {
     font-weight: 700;
 }
+
 .certificate img {
     border: 1px solid #1f2847;
     padding: 30px;
 }
+
+/*Сертификат конец*/
+
+/*Преимущества начало*/
 .advantages {
     height: 1167px;
     background-color: #f0f4f7;
 }
+
 .advantages h2, .advantages h4 {
     line-height: 30px;
     text-transform: uppercase;
 }
+
 .advantages p {
     font-family: Roboto;
     font-weight: 300;
     font-size: 17px;
     line-height: 30px;
 }
+
 .advantages h3 {
     font-family: Roboto;
     font-size: 21px;
     line-height: 27px;
     font-weight: 400;
 }
+
 .advantages .logoWords span {
     font-weight: 700;
     font-size: 18px;
     line-height: 19px;
 }
-.advantages ul span:not([class^="icon"]){
+
+.advantages ul span:not([class^="icon"]) {
     font-size: 15px;
     line-height: 24px;
     font-family: Roboto;
     font-weight: 700;
 }
-.advantages span[class^="icon"]{
+
+.advantages span[class^="icon"] {
     font-size: 43px;
 }
+/*Преимущества конец*/
+
+/*Партнёрская программа начало*/
 .partnersProgram {
     background: linear-gradient(to left, #359ccb, #6b4fbf);
     height: 799px;
 }
+
 .partnersProgram h2 {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 33px;
     line-height: 30px;
 }
+
 .affItems p {
     font-family: Roboto;
     font-size: 15px;
     line-height: 22px;
     color: #ffffff;
 }
-.affItems p>span {
+
+.affItems p > span {
     font-weight: 700;
     font-size: 33px;
     line-height: 36px;
 }
+/*Партнёрская программа конец*/
+
+/*Новости начало*/
 .news {
     height: 969px;
     background-color: #ffffff;
 }
+
 .news h2 {
     text-transform: uppercase;
     font-size: 33px;
     line-height: 30px;
 }
+
 .news h4 {
     font-size: 14px;
     line-height: 30px;
     text-transform: uppercase;
 }
+
 .date {
     font-family: Roboto;
     font-weight: 700;
@@ -317,6 +561,7 @@ div+h1 {
     text-transform: uppercase;
     color: #ffffff;
 }
+
 .news h3 {
     font-size: 17px;
     line-height: 27px;
@@ -324,24 +569,29 @@ div+h1 {
     font-weight: 700;
     text-transform: uppercase;
 }
+
 .news .newsItems h3 {
     font-size: 15px;
 }
+
 .news .current_news {
     background-repeat: no-repeat;
     width: 570px;
     height: 367px;
     background-position: right center;
 }
+
 .news .current_news h3 {
     color: #ffffff;
 }
+
 .news p {
     font-family: Roboto;
     font-size: 15px;
     line-height: 20px;
     color: #6e7383;
 }
+
 .news a {
     color: #49d5fe;
     text-transform: uppercase;
@@ -349,85 +599,113 @@ div+h1 {
     line-height: 20px;
     text-decoration: none;
 }
+
 .news .current_news p {
     line-height: 20px;
 }
+
 .news span:not([class^="date"]) {
     color: #b4c1d2;
     font-size: 13px;
     line-height: 24px;
 }
-.newsList .date>span {
+
+.newsList .date > span {
     font-size: 14px;
     line-height: 20px;
     color: #ffffff;
 }
+
+/*Новости конец*/
+
+/*Способы оплаты*/
 .payments {
     background: linear-gradient(to left, #359ccb, #6b4fbf);
     height: 390px;
 }
-footer{
+/*Способы оплаты конец*/
+
+/*Футер*/
+
+footer {
     background-color: #1f2847;
 }
-footer .menu{
+
+footer .menu {
     background-color: #151b33;
 }
-footer .connect *{
+
+footer .connect * {
     color: #ffffff;
     font-size: 21px;
     font-weight: 700;
     line-height: 54px;
 }
+
 .footerInfo {
     font-size: 15px;
     line-height: 25px;
     color: #bbc0d2;
 }
+
 .social span {
     line-height: 22px;
 }
+
 .footerInfoTitle {
     font-size: 14px;
     line-height: 25px;
     font-family: Roboto;
     font-weight: 700;
 }
+
 footer .address .row1 {
     color: #6981f1;
 }
+
 footer .social .row2 {
     color: #a489d9;
 }
+
 footer .social .row3 {
     color: #49d5fe;
 }
-.topFooter>div{
+
+.topFooter > div {
     display: block;
     float: left;
 }
-.topFooter .social>div{
+
+.topFooter .social > div {
     display: block;
     float: left;
 }
-h1{
+
+h1 {
     font-size: 55px;
     line-height: 60px;
     font-weight: 700;
     color: #ffffff;
 }
+
 .newsMore {
     font-size: 31px;
     line-height: 54px;
     height: auto;
 }
-.newsMore p{
+
+.newsMore p {
     line-height: 22px;
-}.affiliate {
-     background-color: #f0f4f7;
- }
- .referralItems{
-     background-color: #1f2847;
- }
- .referralItems  p {
-     color: #9da4bd;
- }
+}
+
+.affiliate {
+    background-color: #f0f4f7;
+}
+
+.referralItems {
+    background-color: #1f2847;
+}
+
+.referralItems p {
+    color: #9da4bd;
+}
