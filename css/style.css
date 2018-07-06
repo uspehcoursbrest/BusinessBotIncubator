@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+a{
+    text-decoration: none;
+}
 body {
     margin: 0 auto;
     font-family: "Geometria";
@@ -9,6 +11,22 @@ body {
     color: #1f2847;
     max-width: 1920px;
     min-width: 1200px;
+}
+.invisLink {
+    position: relative;
+    z-index: 1;
+}
+.invisLink>a{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
 }
 .bodyWrap{
     overflow: hidden
@@ -138,6 +156,9 @@ header {
     border: 1px solid #4e566e;
 
 }
+.topHeader{
+    height: 120px;
+}
 .topHeader .connect{
     position: relative;
     padding: 11px 18px 11px 44px;
@@ -163,12 +184,35 @@ header {
 
 .banner .connect > * {
     font-size: 18px;
+    line-height: 46px;
+    vertical-align: middle;
+    padding-left:18px;
+
+}
+.bannerTitle{
+    text-align: center;
+    padding-top: 47px;
 }
 
+.banner .connect{
+    width: 256px;
+    height: 46px;
+    margin: 0 auto;
+}
+.banner{
+    height: 348px;
+    width: 630px;
+    margin: 158px auto;
+    text-transform: uppercase;
+    background-color: red;
+    opacity: 0.5;
+}
+.banner h1{
+    line-height: 47px;
+}
 .connect {
     border: 1px solid #49d5fe;
 }
-
 .connectWhite {
     border: 1px solid #858eff;
 }
@@ -190,12 +234,10 @@ div + h1 {
 
 /*3 блока выбора линий начало*/
 .lineItems {
-    height: 152px;
+    height: 130px;
     margin-top: -130px;
     display: table;
     width: 100%;
-    z-index: 5;
-    position: relative;
 }
 .line {
     display: table-cell;
@@ -208,21 +250,65 @@ div + h1 {
     -moz-box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
     box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
     position: relative;
-    z-index: 4;
 }
 
-.line:nth-child(1):before {
-     content: url("../img/png/main_header_lines_right2.png");
-     position: absolute;
-     left: 50%;
-     bottom:65px;
- }
-.line:nth-child(1):after {
-    content: url("../img/png/main_header_lines_right5.png");
+.line:before{
+    content: '';
     position: absolute;
+    -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    height: 23px;
+    width: 46px;
+    left: calc(50% - 23px);
+    bottom: -23px;
+    -webkit-box-shadow: inset -39px -31px 48px -32px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset -39px -31px 48px -32px rgba(0,0,0,0.75);
+    box-shadow: inset -39px -31px 48px -32px rgba(0,0,0,0.75);
+}
+.line:nth-child(1):before{
+    background: #4756a2;
+    display: none;
+}
+.line:nth-child(1):hover:before,.line:nth-child(2):hover:before,.line:nth-child(3):hover:before{
+    display: block;
+}
+.line:nth-child(2):before{
+    background: #7355a1;
+    display: none;
+}
+.line:nth-child(3):before{
+    background: #3487a7;
+    display: none;
+}
+.line:nth-child(1):after {
+    content: '';
+    position: absolute;
+    background-image: url("../img/png/main_header_lines_right2.png");
     left: 50%;
-    top: -212px;
-    z-index: -999;
+    top: -217px;
+    width: 1628px;
+    height: 535px;
+}
+
+.line:nth-child(2):after {
+    content: '';
+    position: absolute;
+    background-image: url("../img/png/main_header_lines_right3.png");
+    left: 50%;
+    top: -139px;
+    width: 1130px;
+    height: 573px;
+
+}
+
+.line:nth-child(3):after {
+    content: '';
+    position: absolute;
+    background-image: url("../img/png/main_header_lines_right1.png");
+    left: 50%;
+    top: -217px;
+    width: 1628px;
+    height: 299px;
 }
 
 .line span {
@@ -275,6 +361,7 @@ div + h1 {
     display: grid;
     grid-template-rows: 138px 121px auto;
     text-align: center;
+
 }
 .cardsWrapper{
     display: grid;
@@ -282,6 +369,7 @@ div + h1 {
     grid-auto-rows: minmax(539px,max-content);
     grid-gap: 31px;
     margin-top: 132px;
+
 }.card span{
      vertical-align: middle;
  }
@@ -296,11 +384,11 @@ div + h1 {
  .card:nth-child(1) .upgrade div{
      background-color: #637ae2;
  }
-.ratesItems .cardName {
+.card .cardName {
     font-size: 17px;
     font-weight: 500;
 }
-.ratesItems span[class='icon-robot']{
+.card span[class='icon-robot']{
     font-size: 60px;
     margin-top: 16px;
 }
@@ -321,11 +409,6 @@ div + h1 {
 }
 .card:nth-child(4) .cardHeader {
     color: #4fceff;
-}
-
-.card {
-    float: left;
-    display: block;
 }
 .card .percent  {
     font-family: Roboto;
