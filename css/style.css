@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 body {
     margin: 0 auto;
     font-family: "Geometria";
@@ -12,11 +14,13 @@ body {
     max-width: 1920px;
     min-width: 1200px;
 }
+
 .invisLink {
     position: relative;
     z-index: 1;
 }
-.invisLink>a{
+
+.invisLink > a {
     display: block;
     position: absolute;
     left: 0;
@@ -28,7 +32,8 @@ body {
     text-indent: 200%;
     white-space: nowrap;
 }
-.bodyWrap{
+
+.bodyWrap {
     overflow: hidden
 }
 
@@ -54,6 +59,7 @@ ul {
     padding: 0;
 
 }
+
 /*Хэдер начало*/
 header {
     height: 1040px;
@@ -71,16 +77,23 @@ header {
     radial-gradient(ellipse at center, rgba(62, 80, 141, 1) 0%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.logo>*{
+.topHeader {
+    width: 100%;
+    position: relative;
+    height: 120px;
+    position: relative;
+}
+
+.logo > * {
     display: inline-block;
 }
-header .logo{
+
+header .logo {
     width: 202px;
     position: absolute;
     left: 0;
     bottom: 13px;
 }
-
 
 .logoWords span:nth-child(1), .companyName span:nth-child(1) {
     color: #6981f1;
@@ -93,6 +106,7 @@ header .logo{
 .logoWords span:nth-child(3), .companyName span:nth-child(3) {
     color: #49d5fe;
 }
+
 .logoWords span {
     font-size: 19px;
     line-height: 19px;
@@ -106,11 +120,13 @@ header .logo{
     font-weight: 700;
     line-height: 14px;
 }
-.topHeader .menu{
+
+.topHeader .menu {
     position: absolute;
     bottom: 5px;
     left: 271px;
 }
+
 .menu {
     display: flex;
     align-content: space-around;
@@ -118,44 +134,55 @@ header .logo{
     text-transform: uppercase;
     line-height: 14px;
 }
+
 .menu li {
     padding: 7px 20px;
     position: relative;
 }
-.menu li+li{
+
+.menu li + li {
     margin-left: 25px;
 }
 
-.topHeader{
-    width: 100%;
-    position: relative;
-    height: 120px;
-    position: relative;
+.langConnect {
+    height: 95px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
-.topHeader .connect{
+
+.lang {
+    width: 97px;
+    height: 33px;
+    background: no-repeat #2f3753 left 5px top 6px;
+    border: 1px solid #4e566e;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.topHeader .connect {
     height: 35px;
     width: 191px;
     border: 1px solid #49d5fe;
     line-height: 33px;
     vertical-align: middle;
 }
+
 .icon-telegram {
     color: #49d5fe;
 }
-.langConnect{
-    height: 95px;
+
+.langConnect .connect {
     position: absolute;
     bottom: 0;
     right: 0;
 }
-.langConnect .connect{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.langConnect .connect a{
+
+.langConnect .connect a {
     padding-left: 11px;
 }
+
 .connect a {
     color: #49d5fe;
     text-decoration: none;
@@ -163,12 +190,13 @@ header .logo{
     font-size: 14px;
     text-transform: uppercase;
 }
+
 /*Ховер у меню*/
 .menu a:hover {
     color: #b998ef;
 }
 
-.menu a:hover::before{
+.menu a:hover::before {
     display: block;
     content: '';
     position: absolute;
@@ -182,7 +210,8 @@ header .logo{
     z-index: 2;
     color: #b998ef;
 }
-.menu a:hover::after{
+
+.menu a:hover::after {
     display: block;
     content: '';
     position: absolute;
@@ -195,27 +224,59 @@ header .logo{
     right: 3px;
     z-index: 2;
 }
+
 /*Ховер у меню конец*/
 
-
-.lang{
-    width: 97px;
-    height: 33px;
-    background:no-repeat #2f3753  left  5px top 6px;
-    border: 1px solid #4e566e;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+.banner {
+    height: 348px;
+    width: 630px;
+    margin: 158px auto 0px;
+    position: relative;
 }
 
+.bannerWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
 
-.banner{
-     height: 348px;
-     width: 630px;
-     border: 2px solid #ffffff;
-     margin: 158px auto 0px;
-    position: relative;
- }
+.banner:before,
+.banner:after,
+.bannerWrapper:before,
+.bannerWrapper:after {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    content: '';
+    border: solid #ffffff;
+}
+
+.banner:before {
+    left: 0;
+    top: 0;
+    border-width: 2px 0 0 2px;
+}
+
+.banner:after {
+    right: 0;
+    top: 0;
+    border-width: 2px 2px 0 0;
+}
+
+.bannerWrapper:before {
+    right: 0;
+    bottom: 0;
+    border-width: 0 2px 2px 0;
+}
+
+.bannerWrapper:after {
+    left: 0;
+    bottom: 0;
+    border-width: 0 0 2px 2px;
+}
+
 h1 {
     font-size: 33px;
     font-weight: 700;
@@ -223,35 +284,41 @@ h1 {
     text-transform: uppercase;
     text-align: center;
 }
-h1>span{
+
+h1 > span {
     line-height: 60px;
 }
+
 .banner .connect > * {
     font-size: 18px;
     line-height: 46px;
     vertical-align: middle;
 }
-.banner .connect a{
+
+.banner .connect a {
     padding-left: 18px;
 }
-.banner .connect{
+
+.banner .connect {
     width: 260px;
     height: 50px;
     text-align: center;
     position: absolute;
-    top:318px;
-    left: calc(50% -  130px);
+    top: 318px;
+    left: calc(50% - 130px);
 }
 
 .connect {
     border: 2px solid #49d5fe;
     text-align: center;
 }
-.companyName{
+
+.companyName {
     width: 100%;
     text-align: center;
-    margin-top:7px;
+    margin-top: 7px;
 }
+
 .companyName span {
     font-weight: 900;
     font-size: 120px;
@@ -266,6 +333,7 @@ h1>span{
     display: table;
     width: 100%;
 }
+
 .line {
     display: table-cell;
     width: 33.3333%;
@@ -279,7 +347,7 @@ h1>span{
     position: relative;
 }
 
-.line:before{
+.line:before {
     content: '';
     position: absolute;
     -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -288,25 +356,30 @@ h1>span{
     width: 46px;
     left: calc(50% - 23px);
     bottom: -23px;
-    -webkit-box-shadow: inset -39px -31px 48px -32px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset -39px -31px 48px -32px rgba(0,0,0,0.75);
-    box-shadow: inset -39px -31px 48px -32px rgba(0,0,0,0.75);
+    -webkit-box-shadow: inset -39px -31px 48px -32px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -39px -31px 48px -32px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -39px -31px 48px -32px rgba(0, 0, 0, 0.75);
 }
-.line:nth-child(1):before{
+
+.line:nth-child(1):before {
     background: #4756a2;
     display: none;
 }
-.line:nth-child(1):hover:before,.line:nth-child(2):hover:before,.line:nth-child(3):hover:before{
+
+.line:nth-child(1):hover:before, .line:nth-child(2):hover:before, .line:nth-child(3):hover:before {
     display: block;
 }
-.line:nth-child(2):before{
+
+.line:nth-child(2):before {
     background: #7355a1;
     display: none;
 }
-.line:nth-child(3):before{
+
+.line:nth-child(3):before {
     background: #3487a7;
     display: none;
 }
+
 .line:nth-child(1):after {
     content: '';
     position: absolute;
@@ -368,62 +441,76 @@ h1>span{
     color: #ffffff;
     text-transform: uppercase;
 }
+
 /*3 блока выбора линий конец*/
 
 /*4 блока с тарифами начало*/
 .rates {
     height: 927px;
 }
+
 .ratesItems {
     margin-top: -22px;
     background-color: #f0f4f7;
 }
-.itemsContent{
+
+.itemsContent {
     display: grid;
-    grid-template-rows: repeat(3,1fr) 134px;
+    grid-template-rows: repeat(3, 1fr) 134px;
 }
+
 .card {
-    border:  1px solid #cfd7dd;
+    border: 1px solid #cfd7dd;
     background-color: #ffffff;
     display: grid;
     grid-template-rows: 138px 121px auto;
     text-align: center;
 
 }
-.cardsWrapper{
+
+.cardsWrapper {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: minmax(539px,max-content);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(539px, max-content);
     grid-gap: 31px;
     margin-top: 132px;
 
-}.card span{
-     vertical-align: middle;
- }
- .itemsContent>div:nth-child(odd){
-     background-color: #f0f4f7;
- }
- .upgrade div{
-     width: 232px;
-     height: 50px;
-     margin: auto;
- }
- .card:nth-child(1) .upgrade div{
-     background-color: #637ae2;
- }
+}
+
+.card span {
+    vertical-align: middle;
+}
+
+.itemsContent > div:nth-child(odd) {
+    background-color: #f0f4f7;
+}
+
+.upgrade div {
+    width: 232px;
+    height: 50px;
+    margin: auto;
+}
+
+.card:nth-child(1) .upgrade div {
+    background-color: #637ae2;
+}
+
 .card .cardName {
     font-size: 17px;
     font-weight: 500;
 }
-.card span[class='icon-robot']{
+
+.card span[class='icon-robot'] {
     font-size: 60px;
     margin-top: 16px;
 }
-.cardHeader{
+
+.cardHeader {
     background-color: #1f2847;
     display: grid;
- }
-.card:first-child .cardHeader{
+}
+
+.card:first-child .cardHeader {
     color: #6e87fa;
 }
 
@@ -434,10 +521,12 @@ h1>span{
 .card:nth-child(3) .cardHeader {
     color: #af82f6;
 }
+
 .card:nth-child(4) .cardHeader {
     color: #4fceff;
 }
-.card .percent  {
+
+.card .percent {
     font-family: Roboto;
     font-weight: 900;
     padding: 30px;
@@ -475,8 +564,6 @@ h1>span{
     font-weight: 700;
 }
 
-
-
 .card:nth-child(1) .upgrade span {
     color: #5a6fcf;
 }
@@ -492,6 +579,7 @@ h1>span{
 .card:nth-child(4) .upgrade span {
     color: #33c1f7;
 }
+
 /*4 блока с тарифами конец*/
 
 /*Калькулятор начало*/
@@ -527,20 +615,69 @@ h1>span{
     font-family: Roboto;
     font-weight: 900;
 }
-
-.connectWhite > * {
+/*Кнопка подключиться*/
+.connectWhite {
+    width: 466px;
+    height: 80px;
+    position: relative;
+}
+.connectWhite * {
     font-size: 21px;
-    line-height: 54px;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
 }
-.connectWhite {
-    border: 1px solid #858eff;
-}
+
 .connectWhite a {
     font-weight: 700;
+    padding-left: 21px;
 }
+
+.connectWrapper {
+    position: absolute;
+    text-align: center;
+    line-height: 80px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.connectWhite:before,
+.connectWhite:after,
+.connectWrapper:before,
+.connectWrapper:after {
+    position: absolute;
+    width: 20px;
+    height: 21px;
+    content: '';
+    border: solid #858eff;
+}
+
+.connectWhite:before {
+    left: 0;
+    top: 0;
+    border-width: 2px 0 0 2px;
+}
+
+.connectWhite:after {
+    right: 0;
+    top: 0;
+    border-width: 2px 2px 0 0;
+}
+
+.connectWrapper:before {
+    right: 0;
+    bottom: 0;
+    border-width: 0 2px 2px 0;
+}
+
+.connectWrapper:after {
+    left: 0;
+    bottom: 0;
+    border-width: 0 0 2px 2px;
+}
+/*Кнопка подключиться конец*/
 /*Калькулятор конец*/
 
 /*Сертификат начало*/
@@ -620,6 +757,7 @@ h1>span{
 .advantages span[class^="icon"] {
     font-size: 43px;
 }
+
 /*Преимущества конец*/
 
 /*Партнёрская программа начало*/
@@ -647,6 +785,7 @@ h1>span{
     font-size: 33px;
     line-height: 36px;
 }
+
 /*Партнёрская программа конец*/
 
 /*Новости начало*/
@@ -675,14 +814,14 @@ h1>span{
     color: #ffffff;
     width: 73px;
     height: 73px;
-    background: rgba(80,189,239,1);
-    background: -moz-linear-gradient(left, rgba(80,189,239,1) 0%, rgba(127,97,220,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(80,189,239,1)), color-stop(100%, rgba(127,97,220,1)));
-    background: -webkit-linear-gradient(left, rgba(80,189,239,1) 0%, rgba(127,97,220,1) 100%);
-    background: -o-linear-gradient(left, rgba(80,189,239,1) 0%, rgba(127,97,220,1) 100%);
-    background: -ms-linear-gradient(left, rgba(80,189,239,1) 0%, rgba(127,97,220,1) 100%);
-    background: linear-gradient(to right, rgba(80,189,239,1) 0%, rgba(127,97,220,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50bdef', endColorstr='#7f61dc', GradientType=1 );
+    background: rgba(80, 189, 239, 1);
+    background: -moz-linear-gradient(left, rgba(80, 189, 239, 1) 0%, rgba(127, 97, 220, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(80, 189, 239, 1)), color-stop(100%, rgba(127, 97, 220, 1)));
+    background: -webkit-linear-gradient(left, rgba(80, 189, 239, 1) 0%, rgba(127, 97, 220, 1) 100%);
+    background: -o-linear-gradient(left, rgba(80, 189, 239, 1) 0%, rgba(127, 97, 220, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(80, 189, 239, 1) 0%, rgba(127, 97, 220, 1) 100%);
+    background: linear-gradient(to right, rgba(80, 189, 239, 1) 0%, rgba(127, 97, 220, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50bdef', endColorstr='#7f61dc', GradientType=1);
 
 }
 
@@ -693,10 +832,12 @@ h1>span{
     font-weight: 700;
     text-transform: uppercase;
 }
-.newsContent{
+
+.newsContent {
     border: 1px solid #cfd7dd;
     border-top: none;
 }
+
 .newsItem h3 {
     font-size: 15px;
     display: block;
@@ -707,7 +848,7 @@ h1>span{
     width: 570px;
     height: 367px;
     background-position: right center;
-    grid-row: 1 / -1 ;
+    grid-row: 1 / -1;
 }
 
 .news .current_news h3 {
@@ -732,35 +873,40 @@ h1>span{
 .news .current_news p {
     line-height: 20px;
 }
-.item_news .date{
+
+.item_news .date {
     display: block;
     float: left;
 }
-.month{
+
+.month {
     font-size: 14px;
     line-height: 20px;
     color: #ffffff;
 }
-.item_news .newsHeader{
+
+.item_news .newsHeader {
     background-color: #f0f4f7;
     height: 73px;
 
 }
-.newsHeader span[class='icon-robot']{
+
+.newsHeader span[class='icon-robot'] {
     font-size: 16px;
     color: #9b9fad;
 }
-.newsHeader span[class='icon-robot']+span{
+
+.newsHeader span[class='icon-robot'] + span {
     color: #9b9fad;
     font-size: 13px;
     line-height: 24px;
 }
-.newsList{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,auto);
-}
 
+.newsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
 
 /*Новости конец*/
 
@@ -769,16 +915,13 @@ h1>span{
     background: linear-gradient(to left, #359ccb, #6b4fbf);
     height: 390px;
 }
+
 /*Способы оплаты конец*/
 
 /*Футер*/
 
 footer {
     background-color: #1f2847;
-}
-
-footer .menu {
-    background-color: #151b33;
 }
 
 footer .connect * {
@@ -827,8 +970,6 @@ footer .social .row3 {
     float: left;
 }
 
-
-
 .newsMore {
     font-size: 31px;
     line-height: 54px;
@@ -849,4 +990,23 @@ footer .social .row3 {
 
 .referralItems p {
     color: #9da4bd;
+}
+
+footer .menu {
+    display: flex;
+    flex-direction: row;
+    line-height: 14px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 37px;
+    left: 683px;
+    right: 0;
+}
+footer .menu li{
+    margin: 0 5px 0 0;
+}
+.menuFooter {
+    background-color: #151b33;
+    height: 96px;
+    position: relative;
 }
