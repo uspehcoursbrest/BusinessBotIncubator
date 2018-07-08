@@ -67,7 +67,7 @@
                         <div class="cardHeader"><span class="icon-robot"></span><span
                                 class="cardName">TEST</span>
                         </div>
-                        <div class="percent"><span>1.0%<span>В сутки</span> </span></div>
+                        <div class="percent"><span>1.0%</span><span>В сутки</span></div>
                         <div class="itemsContent">
                             <div><span>Срок: 15 дней</span></div>
                             <div><span>Min - Max: 5$ - 50$</span></div>
@@ -82,7 +82,7 @@
                         <div class="cardHeader"><span class="icon-robot"></span><span
                                 class="cardName">POWER</span>
                         </div>
-                        <div class="percent"><span>1.5%<span>В сутки</span> </span></div>
+                        <div class="percent"><span>1.5%</span><span>В сутки</span></div>
                         <div class="itemsContent">
                             <div><span>Срок: 30 дней</span></div>
                             <div><span>Min - Max: 51$ - 100$</span></div>
@@ -97,7 +97,7 @@
                         <div class="cardHeader"><span class="icon-robot"></span><span
                                 class="cardName">ULTIMATUM</span>
                         </div>
-                        <div class="percent"><span>2.0%<span>В сутки</span> </span></div>
+                        <div class="percent"><span>2.0%</span><span>В сутки</span></div>
                         <div class="itemsContent">
                             <div><span>Срок: 40 дней</span></div>
                             <div><span>Min - Max: 101$ - 500$</span></div>
@@ -112,7 +112,7 @@
                         <div class="cardHeader"><span class="icon-robot"></span><span
                                 class="cardName">BIT</span>
                         </div>
-                        <div class="percent"><span>1.0%<span>В сутки</span> </span></div>
+                        <div class="percent"><span>1.0%</span><span>В сутки</span></div>
                         <div class="itemsContent">
                             <div><span>Срок: 40 дней</span></div>
                             <div><span>Min - Max: 0.015 btc - 0.140 btc</span></div>
@@ -128,47 +128,51 @@
         </div>
     </div>
     <div class="calculator">
-        <div class="container">
-            <div class="calc_left">
-                <div>
-                    <h2>Калькулятор прибыли</h2>
-                    <h4>Расчитайте свою прибыль</h4>
-                </div>
-                <form action="">
-                    <fieldset>
-                        <label for="calcLine">Выберите линию:</label>
-                        <select name="" id="calcLine">
-                            <option value="profit">Линия прибыли</option>
-                            <option value="stability">Линия стабильности</option>
-                            <option value="infinity">Линия бесконечности</option>
-                        </select>
-                    </fieldset>
-                    <fieldset>
-                        <label for="calcRates">Выберите бота:</label>
-                        <select name="" id="calcRates">
-                            <option value="test">TEST 1.0% в сутки</option>
-                            <option selected value="power">POWER 1.5% в сутки</option>
-                            <option value="ultimate">ULTIMATUM 2.0% в сутки</option>
-                            <option value="bit">BIT 1.0% в сутки</option>
-                        </select>
-                    </fieldset>
-                </form>
-                <form action="">
-                    <fieldset>
-                        <label for="sum">Введите сумму:</label>
-                        <input type="text" id="sum" placeholder="83">
-                    </fieldset>
-                    <div class="sum_change">
+        <div class="calcTop">
+            <div class="container">
+                <div class="calcWrapper">
+                    <div class="calcTitle">
+                        <h2>Калькулятор прибыли</h2>
+                        <h4>Расчитайте свою прибыль</h4>
                     </div>
-                </form>
-
-            </div>
-            <div class="calc_right">
+                    <form action="" class="calcChangeLine">
+                        <fieldset>
+                            <label for="calcLine">Выберите линию:</label>
+                            <select name="" id="calcLine">
+                                <option value="profit">Линия прибыли</option>
+                                <option value="stability">Линия стабильности</option>
+                                <option value="infinity">Линия бесконечности</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <label for="calcRates">Выберите бота:</label>
+                            <select name="" id="calcRates">
+                                <option value="test">TEST 1.0% в сутки</option>
+                                <option selected value="power">POWER 1.5% в сутки</option>
+                                <option value="ultimate">ULTIMATUM 2.0% в сутки</option>
+                                <option value="bit">BIT 1.0% в сутки</option>
+                            </select>
+                        </fieldset>
+                    </form>
+                    <form action="" class="calcChangeSum">
+                        <fieldset>
+                            <label for="sum">Введите сумму:</label>
+                            <input type="text" id="sum" placeholder="83">
+                        </fieldset>
+                    </form>
+                </div>
                 <div class="profit">
                     <h3>Ваша прибыль:</h3>
                     <span>120.59$</span>
                 </div>
-                <div class="connectWhite"><div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div></div>
+            </div>
+        </div>
+        <div class="calcFooter">
+            <div class="container">
+                <div class="sumChange"></div>
+                <div class="connectWhite">
+                    <div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div>
+                </div>
             </div>
         </div>
     </div>
@@ -255,7 +259,10 @@
                             начислений на 1%, максимальная отметка достигает <span>10%</span></p></li>
                     </ul>
                 </div>
-                <div class="connectWhite"><div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div></div>            </div>
+                <div class="connectWhite">
+                    <div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="news">
@@ -324,7 +331,10 @@
     </div>
     <footer>
         <div class="container">
-            <div class="connectWhite"><div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div></div>            <div class="topFooter cfix">
+            <div class="connectWhite">
+                <div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div>
+            </div>
+            <div class="topFooter cfix">
                 <div class="copyright">
                     <div class="logo invisLink">
                         <img src="img/png/logoLetters.png" alt="">

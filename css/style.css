@@ -1,11 +1,16 @@
 * {
     box-sizing: border-box;
 }
-
+* {
+    padding: 0;
+    margin: 0;
+}
 a {
     text-decoration: none;
 }
-
+fieldset{
+    border:  none;
+}
 body {
     margin: 0 auto;
     font-family: "Geometria";
@@ -13,6 +18,7 @@ body {
     color: #1f2847;
     max-width: 1920px;
     min-width: 1200px;
+    padding: 0;
 }
 
 .invisLink {
@@ -332,6 +338,8 @@ h1 > span {
     margin-top: -130px;
     display: table;
     width: 100%;
+    position: relative;
+    z-index: 3;
 }
 
 .line {
@@ -345,6 +353,18 @@ h1 > span {
     -moz-box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
     box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
     position: relative;
+    z-index: 3;
+}
+.line:nth-child(1) {
+    background-color: #6980f0;
+}
+
+.line:nth-child(2) {
+    background-color: #af82f6;
+}
+
+.line:nth-child(3) {
+    background-color: #4fceff;
 }
 
 .line:before {
@@ -378,6 +398,7 @@ h1 > span {
 .line:nth-child(3):before {
     background: #3487a7;
     display: none;
+
 }
 
 .line:nth-child(1):after {
@@ -388,6 +409,7 @@ h1 > span {
     top: -217px;
     width: 1628px;
     height: 535px;
+    z-index: 1;
 }
 
 .line:nth-child(2):after {
@@ -398,7 +420,7 @@ h1 > span {
     top: -139px;
     width: 1130px;
     height: 573px;
-
+    z-index: 1;
 }
 
 .line:nth-child(3):after {
@@ -409,23 +431,13 @@ h1 > span {
     top: -217px;
     width: 1628px;
     height: 299px;
+    z-index: 1;
 }
 
 .line span {
     display: block;
 }
 
-.line:nth-child(1) {
-    background-color: #6980f0;
-}
-
-.line:nth-child(2) {
-    background-color: #af82f6;
-}
-
-.line:nth-child(3) {
-    background-color: #4fceff;
-}
 
 .firstLine {
     font-weight: 500;
@@ -447,11 +459,6 @@ h1 > span {
 /*4 блока с тарифами начало*/
 .rates {
     height: 927px;
-}
-
-.ratesItems {
-    margin-top: -22px;
-    background-color: #f0f4f7;
 }
 
 .itemsContent {
@@ -476,11 +483,6 @@ h1 > span {
     margin-top: 132px;
 
 }
-
-.card span {
-    vertical-align: middle;
-}
-
 .itemsContent > div:nth-child(odd) {
     background-color: #f0f4f7;
 }
@@ -488,12 +490,10 @@ h1 > span {
 .upgrade div {
     width: 232px;
     height: 50px;
-    margin: auto;
+    margin: 15px auto;
 }
 
-.card:nth-child(1) .upgrade div {
-    background-color: #637ae2;
-}
+
 
 .card .cardName {
     font-size: 17px;
@@ -529,16 +529,17 @@ h1 > span {
 .card .percent {
     font-family: Roboto;
     font-weight: 900;
-    padding: 30px;
+    padding-top: 23px;
 }
 
-.card .percent span {
+.card .percent>span {
     font-size: 45px;
-    color: #000;
+    display: block;
 }
 
-.card .percent span > span {
+.card .percent span+span {
     font-size: 15px;
+    margin-top: -3px;
 }
 
 .card .itemsContent span {
@@ -579,38 +580,97 @@ h1 > span {
 .card:nth-child(4) .upgrade span {
     color: #33c1f7;
 }
-
+.card:nth-child(1) .upgrade div {
+    background-color: #637ae2;
+}
+.card:nth-child(2) .upgrade div {
+    background-color: #858eff;
+}
+.card:nth-child(3) .upgrade div {
+    background-color: #af82f6;
+}
+.card:nth-child(4) .upgrade div {
+    background-color: #4fceff;
+}
 /*4 блока с тарифами конец*/
 
 /*Калькулятор начало*/
-.calculator {
-    height: 785px;
-    background: linear-gradient(to left, #359ccb, #6b4fbf);
+.calcFooter{
+    height: 138px;
+    background-color: #1f2847;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
-
-.calculator h2 {
+.calcWrapper{
+    width: 570px;
+    height: 529px;
+}
+.calcTitle{
+    margin-top: 94px;
+}
+.calcChangeSum{
+    background-color: #1f2847;
+    height: 154px;
+}
+.calcChangeSum input{
+    background-color: #2f3753;
     color: #ffffff;
+    width: 510px;
+    height: 44px;
+    border: 1px solid #4e566e;
+    padding: 0 30px;
+    margin: 0 30px;
+    position: relative;
+}
+.calcChangeSum input:before{
+    content: '$';
+    position: absolute;
+    color: #ffffff;
+}
+.calculator {
+    background: linear-gradient(to left, #359ccb, #6b4fbf);
+    position: relative;
+    height: 669px;
+    color: #ffffff;
+
+}
+.calculator:after{
+    background-image: url(../img/png/hand_phone.png);
+    content: '';
+    position: absolute;
+    height: 612px;
+    width: 966px;
+    right: 0;
+    bottom: -19px;
+}
+.calculator h2 {
     font-size: 37px;
     line-height: 54px;
 }
 
 .calculator h4 {
-    color: #ffffff;
     font-size: 14px;
     line-height: 54px;
     text-transform: uppercase;
 }
 
 .calculator h3 {
-    color: #ffffff;
     font-size: 21px;
     line-height: 54px;
     text-transform: uppercase;
 }
+.profit{
+    position: absolute;
+    top:225px;
+    right: 500px;
+    z-index: 2;
+    text-align: center;
 
+}
 .calculator .profit span {
     font-size: 70px;
-    line-height: 34px;
+    line-height: 54px;
     color: #858eff;
     font-family: Roboto;
     font-weight: 900;
