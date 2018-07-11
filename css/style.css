@@ -1,16 +1,20 @@
 * {
     box-sizing: border-box;
 }
+
 * {
     padding: 0;
     margin: 0;
 }
+
 a {
     text-decoration: none;
 }
-fieldset{
-    border:  none;
+
+fieldset {
+    border: none;
 }
+
 body {
     margin: 0 auto;
     font-family: "Geometria";
@@ -339,7 +343,7 @@ h1 > span {
     display: table;
     width: 100%;
     position: relative;
-    z-index: 3;
+    z-index: 1;
 }
 
 .line {
@@ -353,8 +357,8 @@ h1 > span {
     -moz-box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
     box-shadow: inset -33px -33px 153px -36px rgba(0, 0, 0, 0.75);
     position: relative;
-    z-index: 3;
 }
+
 .line:nth-child(1) {
     background-color: #6980f0;
 }
@@ -409,7 +413,7 @@ h1 > span {
     top: -217px;
     width: 1628px;
     height: 535px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .line:nth-child(2):after {
@@ -420,7 +424,7 @@ h1 > span {
     top: -139px;
     width: 1130px;
     height: 573px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .line:nth-child(3):after {
@@ -431,13 +435,12 @@ h1 > span {
     top: -217px;
     width: 1628px;
     height: 299px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .line span {
     display: block;
 }
-
 
 .firstLine {
     font-weight: 500;
@@ -483,6 +486,7 @@ h1 > span {
     margin-top: 132px;
 
 }
+
 .itemsContent > div:nth-child(odd) {
     background-color: #f0f4f7;
 }
@@ -492,8 +496,6 @@ h1 > span {
     height: 50px;
     margin: 15px auto;
 }
-
-
 
 .card .cardName {
     font-size: 17px;
@@ -532,12 +534,12 @@ h1 > span {
     padding-top: 23px;
 }
 
-.card .percent>span {
+.card .percent > span {
     font-size: 45px;
     display: block;
 }
 
-.card .percent span+span {
+.card .percent span + span {
     font-size: 15px;
     margin-top: -3px;
 }
@@ -580,40 +582,49 @@ h1 > span {
 .card:nth-child(4) .upgrade span {
     color: #33c1f7;
 }
+
 .card:nth-child(1) .upgrade div {
     background-color: #637ae2;
 }
+
 .card:nth-child(2) .upgrade div {
     background-color: #858eff;
 }
+
 .card:nth-child(3) .upgrade div {
     background-color: #af82f6;
 }
+
 .card:nth-child(4) .upgrade div {
     background-color: #4fceff;
 }
+
 /*4 блока с тарифами конец*/
 
 /*Калькулятор начало*/
-.calcFooter{
+.calcFooter {
     height: 138px;
     background-color: #1f2847;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
-.calcWrapper{
+
+.calcWrapper {
     width: 570px;
     height: 529px;
 }
-.calcTitle{
+
+.calcTitle {
     margin-top: 94px;
 }
-.calcChangeSum{
+
+.calcChangeSum {
     background-color: #1f2847;
     height: 154px;
 }
-.calcChangeSum input{
+
+.calcChangeSum input {
     background-color: #2f3753;
     color: #ffffff;
     width: 510px;
@@ -623,11 +634,13 @@ h1 > span {
     margin: 0 30px;
     position: relative;
 }
-.calcChangeSum input:before{
+
+.calcChangeSum input:before {
     content: '$';
     position: absolute;
     color: #ffffff;
 }
+
 .calculator {
     background: linear-gradient(to left, #359ccb, #6b4fbf);
     position: relative;
@@ -635,7 +648,8 @@ h1 > span {
     color: #ffffff;
 
 }
-.calculator:after{
+
+.calculator:after {
     background-image: url(../img/png/hand_phone.png);
     content: '';
     position: absolute;
@@ -644,6 +658,7 @@ h1 > span {
     right: 0;
     bottom: -19px;
 }
+
 .calculator h2 {
     font-size: 37px;
     line-height: 54px;
@@ -660,14 +675,16 @@ h1 > span {
     line-height: 54px;
     text-transform: uppercase;
 }
-.profit{
+
+.profit {
     position: absolute;
-    top:225px;
+    top: 225px;
     right: 500px;
     z-index: 2;
     text-align: center;
 
 }
+
 .calculator .profit span {
     font-size: 70px;
     line-height: 54px;
@@ -675,12 +692,14 @@ h1 > span {
     font-family: Roboto;
     font-weight: 900;
 }
+
 /*Кнопка подключиться*/
 .connectWhite {
     width: 466px;
     height: 80px;
     position: relative;
 }
+
 .connectWhite * {
     font-size: 21px;
     color: #ffffff;
@@ -737,6 +756,7 @@ h1 > span {
     bottom: 0;
     border-width: 0 0 2px 2px;
 }
+
 /*Кнопка подключиться конец*/
 /*Калькулятор конец*/
 
@@ -968,20 +988,37 @@ h1 > span {
     grid-template-rows: repeat(3, auto);
 }
 
+.newsMore {
+    font-size: 31px;
+    line-height: 54px;
+    height: auto;
+}
+
+.newsMore p {
+    line-height: 22px;
+}
+
 /*Новости конец*/
 
 /*Способы оплаты*/
 .payments {
-    background: linear-gradient(to left, #359ccb, #6b4fbf);
+    background: url("../img/png/payleft.png") top left no-repeat,url("../img/png/payright.png") bottom -381px right -84px  no-repeat,linear-gradient(to left, #359ccb, #6b4fbf);
     height: 390px;
-}
 
+}
+.payItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 128px;
+}
 /*Способы оплаты конец*/
 
 /*Футер*/
 
 footer {
     background-color: #1f2847;
+    position: relative;
 }
 
 footer .connect * {
@@ -990,22 +1027,61 @@ footer .connect * {
     font-weight: 700;
     line-height: 54px;
 }
+footer .connectWhite{
+    margin: 0 auto;
+}
+footer .connectWhite span[class^="icon"]{
+    font-size: 30px;
+}
+footer:after{
+    content: '';
+    position: absolute;
+    height: 54px;
+    width: 571px;
+    background-image: url(../img/png/con_footer.png);
+    top: -54px;
+    left: calc(50% - 285px);
+}
+.topFooter span[class^="icon"] {
+    position: absolute;
+    left: -26px;
+    font-size: 14px;
+}
+
+.topFooter li, .address {
+    position: relative;
+}
 
 .footerInfo {
     font-size: 15px;
     line-height: 25px;
     color: #bbc0d2;
+    font-family: Roboto;
+}
+
+.address .footerInfo {
+    display: block;
+    margin-top: 33px;
+}
+
+.copyright .footerInfo {
+    display: block;
+    margin-top: 46px;
 }
 
 .social span {
     line-height: 22px;
 }
 
+.social li + li {
+    margin-top: 23px;
+}
+
 .footerInfoTitle {
     font-size: 14px;
-    line-height: 25px;
     font-family: Roboto;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 footer .address .row1 {
@@ -1020,26 +1096,43 @@ footer .social .row3 {
     color: #49d5fe;
 }
 
-.topFooter > div {
-    display: block;
+.topFooter {
+    margin-top: 98px;
+}
+
+.topFooter .copyright {
     float: left;
+
+    margin-top: -10px;
 }
 
-.topFooter .social > div {
-    display: block;
-    float: left;
+.topFooter .address {
+    display: inline-block;
+    margin-left: 123px;
 }
 
-.newsMore {
-    font-size: 31px;
-    line-height: 54px;
-    height: auto;
+.topFooter .social {
+    display: inline-block;
+    margin-left: 80px;
+
 }
 
-.newsMore p {
-    line-height: 22px;
+.topFooter .social ul {
+    display: inline-block;
+}
+.topFooter .social ul:last-child {
+    margin-left: 124px;
 }
 
+.menuFooter {
+    background-color: #151b33;
+    height: 96px;
+    margin-top: 92px;
+    padding-top: 30px;
+
+}
+footer .menu {
+    justify-content: center;}
 .affiliate {
     background-color: #f0f4f7;
 }
@@ -1050,23 +1143,4 @@ footer .social .row3 {
 
 .referralItems p {
     color: #9da4bd;
-}
-
-footer .menu {
-    display: flex;
-    flex-direction: row;
-    line-height: 14px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 37px;
-    left: 683px;
-    right: 0;
-}
-footer .menu li{
-    margin: 0 5px 0 0;
-}
-.menuFooter {
-    background-color: #151b33;
-    height: 96px;
-    position: relative;
 }
