@@ -1,11 +1,10 @@
 * {
     box-sizing: border-box;
+
 }
 
-* {
-    padding: 0;
-    margin: 0;
-}
+
+
 
 a {
     text-decoration: none;
@@ -73,6 +72,18 @@ ul {
 /*Хэдер начало*/
 header {
     height: 1040px;
+    position: relative;
+}
+
+header:after {
+    width: 1920px;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 0;
+    margin-left: -960px;
+    height: inherit;
     background: rgb(62, 80, 141); /* Old browsers */
     background: -moz-radial-gradient(center, ellipse cover, rgba(62, 80, 141, 1) 0%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 88%); /* FF3.6-15 */
     background: -webkit-radial-gradient(center, ellipse cover, rgba(62, 80, 141, 1) 0%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 88%); /* Chrome10-25,Safari5.1-6 */
@@ -85,6 +96,7 @@ header {
     url("../img/png/header_left_lines.png") no-repeat left bottom -28px,
     url("../img/png/header_right_lines.png") no-repeat right bottom -159px,
     radial-gradient(ellipse at center, rgba(62, 80, 141, 1) 0%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 62%, rgba(24, 32, 59, 1) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 }
 
 .topHeader {
@@ -164,11 +176,37 @@ header .logo {
 .lang {
     width: 97px;
     height: 33px;
-    background: no-repeat #2f3753 left 5px top 6px;
-    border: 1px solid #4e566e;
+
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
+
+}
+.lang>div{
+    border: 1px solid #4e566e;
+    width: 100%;
+    color: #ffffff;
+    background-color: #2f3753;
+}
+.lang span{
+    margin:  50px;
+    line-height: 30px;
+}
+
+.langitem:nth-child(1){
+    background: url(../img/jpg/eng.jpg) left 7px top 4px no-repeat;
+    border-bottom: 1px solid #4e566e;
+    height: 33px;
+}
+.langitem:nth-child(2){
+    background: url(../img/jpg/ch.jpg)  left 7px top 4px no-repeat;
+    border-bottom: 1px solid #4e566e;
+    height: 33px;
+}
+.langitem:nth-child(3){
+    background: url(../img/jpg/rus.jpg)  left 7px top 4px no-repeat;
+    height: 33px;
 }
 
 .topHeader .connect {
@@ -408,8 +446,8 @@ h1 > span {
 .line:nth-child(1):after {
     content: '';
     position: absolute;
-    background-image: url("../img/png/main_header_lines_right2.png");
-    left: 50%;
+    background: url("../img/png/main_header_lines_right1.png") no-repeat;
+    left: calc(50% - 10px);
     top: -217px;
     width: 1628px;
     height: 535px;
@@ -419,8 +457,8 @@ h1 > span {
 .line:nth-child(2):after {
     content: '';
     position: absolute;
-    background-image: url("../img/png/main_header_lines_right3.png");
-    left: 50%;
+    background: url("../img/png/main_header_lines_right2.png") no-repeat;
+    left: calc(50% - 20px);
     top: -139px;
     width: 1130px;
     height: 573px;
@@ -430,8 +468,8 @@ h1 > span {
 .line:nth-child(3):after {
     content: '';
     position: absolute;
-    background-image: url("../img/png/main_header_lines_right1.png");
-    left: 50%;
+    background: url("../img/png/main_header_lines_right3.png") no-repeat;
+    left: calc(50% - 10px);
     top: -217px;
     width: 1628px;
     height: 299px;
@@ -602,6 +640,14 @@ h1 > span {
 /*4 блока с тарифами конец*/
 
 /*Калькулятор начало*/
+.calculator {
+    background: linear-gradient(to left, #359ccb, #6b4fbf);
+    position: relative;
+    height: 669px;
+    color: #ffffff;
+
+}
+
 .calcFooter {
     height: 138px;
     background-color: #1f2847;
@@ -610,18 +656,98 @@ h1 > span {
     width: 100%;
 }
 
+.calcFooter .container > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.calcFooter .connectWhite {
+    margin-left: 124px;
+}
+
 .calcWrapper {
     width: 570px;
     height: 529px;
+    padding-top: 94px;
 }
 
 .calcTitle {
-    paddin-top: 94px;
+    position: relative;
+    padding: 28px 0 0 40px;
+    width: 570px;
+
+}
+
+.calcTitle:before {
+    display: block;
+    content: '';
+    position: absolute;
+    border: 2px solid #ffffff;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.calcTitle:after {
+    display: block;
+    content: '';
+    position: absolute;
+    border: 2px solid #ffffff;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.calcChangeLine {
+    margin-top: 30px;
+}
+
+.calcChangeLine fieldset {
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.calcChangeLine fieldset:last-child {
+    padding-left: 14px;
+}
+
+.calcChangeLine select {
+    margin-top: 13px;
+    width: 271px;
+    height: 44px;
 }
 
 .calcChangeSum {
     background-color: #1f2847;
     height: 154px;
+    margin-top: 58px;
+    padding-top: 44px;
+    text-align: center;
+    position: relative;
+    -webkit-box-shadow: inset 0px 29px 30px -12px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: inset 0px 29px 30px -12px rgba(0, 0, 0, 0.39);
+    box-shadow: inset 0px 29px 30px -12px rgba(0, 0, 0, 0.39);
+}
+
+.calcChangeSum:after {
+    content: '';
+    height: 24px;
+    width: 48px;
+    background: url("../img/png/calcarrow.png");
+    position: absolute;
+    left: calc(50% - 24px);
+    top: -1px;
+
 }
 
 .calcChangeSum input {
@@ -630,23 +756,35 @@ h1 > span {
     width: 510px;
     height: 44px;
     border: 1px solid #4e566e;
-    padding: 0 30px;
-    margin: 0 30px;
+    padding: 0 35px;
+    margin: 15px 30px;
     position: relative;
+    font-family: Roboto;
+    font-weight: 700;
+    -webkit-box-shadow: inset 0px 29px 15px -24px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: inset 0px 29px 15px -24px rgba(0, 0, 0, 0.39);
+    box-shadow: inset 0px 29px 15px -24px rgba(0, 0, 0, 0.39);
 }
 
-.calcChangeSum input:before {
+.calcChangeSum:before {
     content: '$';
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 21px;
     position: absolute;
-    color: #ffffff;
+    color: #748af2;
+    left: 48px;
+    top: 88px;
+    z-index: 2;
 }
-
-.calculator {
-    background: linear-gradient(to left, #359ccb, #6b4fbf);
-    position: relative;
-    height: 669px;
-    color: #ffffff;
-
+.calcChangeSum fieldset{
+    margin: 0;
+    padding: 0;
+}
+.sumChange {
+    height: 138px;
+    width: 570px;
+    border: 1px solid green;
 }
 
 .calculator:after {
@@ -661,13 +799,14 @@ h1 > span {
 
 .calculator h2 {
     font-size: 37px;
-    line-height: 54px;
+    text-transform: uppercase;
 }
 
 .calculator h4 {
     font-size: 14px;
-    line-height: 54px;
+    line-height: 44px;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .calculator h3 {
@@ -766,23 +905,71 @@ h1 > span {
     height: 742px;
 }
 
-.certificate .certTitle > span {
+.certTitle {
+    padding: 168px 45px 0 45px;
+    position: relative;
+}
+
+.certTitle:before {
+    display: block;
+    content: '';
+    position: absolute;
+    border: 3px solid #4cc4f4;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    width: 65px;
+    height: 65px;
+    top: 165px;
+    left: 0;
+    z-index: 2;
+}
+
+.certTitle > span {
     font-size: 177px;
-    line-height: 54px;
     font-weight: 800;
+    position: absolute;
+    opacity: 0.77;
+    left: 17px;
+    bottom: -21px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1edfa+0,e4d8f7+100 */
+    background: rgb(225,237,250); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(225,237,250,1) 0%, rgba(228,216,247,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(225,237,250,1) 0%,rgba(228,216,247,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(225,237,250,1) 0%,rgba(228,216,247,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1edfa', endColorstr='#e4d8f7',GradientType=1 ); /* IE6-9 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.certificate h2 {
-    font-size: 33px;
-    line-height: 54px;
+.certTitle h4 {
     text-transform: uppercase;
+    font-size: 14px;
+
 }
 
-.certificate p {
+.certTitle h2 {
+    font-size: 33px;
+    line-height: 70px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.certContent p {
     font-family: Roboto;
     font-weight: 300;
     font-size: 17px;
     line-height: 30px;
+    float: left;
+    width: 33%;
+}
+
+.certContent p + p {
+    margin-left: 45px;
+}
+
+.certContent {
+    margin: 51px 0 0 42px;
 }
 
 .certificate p > span {
@@ -790,8 +977,14 @@ h1 > span {
 }
 
 .certificate img {
-    border: 1px solid #1f2847;
     padding: 30px;
+    margin-left: 68px;
+    height: 317px;
+    width: 240px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 33px -8px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 0px 33px -8px rgba(0,0,0,0.56);
+    box-shadow: 0px 0px 33px -8px rgba(0,0,0,0.56);
 }
 
 /*Сертификат конец*/
@@ -800,25 +993,80 @@ h1 > span {
 .advantages {
     height: 1167px;
     background-color: #f0f4f7;
+    position: relative;
 }
 
-.advantages h2, .advantages h4 {
+.advantages h2 {
+    font-size: 33px;
     line-height: 30px;
     text-transform: uppercase;
+
+}
+
+.advantages h4 {
+    font-size: 14px;
+    line-height: 39px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.advTitle {
+    text-align: center;
+    padding: 165px 0 12px;
+    position: relative;
+    width: 573px;
+    margin: 0 auto;
+}
+
+.advMainTitle {
+    text-align: center;
+}
+
+.advMainTitle div + div {
+    margin-top: 50px;
+}
+
+.advTitle:before {
+    display: block;
+    content: '';
+    position: absolute;
+    border: 2px solid #4cc4f4;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    width: 40px;
+    height: 40px;
+    top: 125px;
+    left: 0;
+    z-index: 2;
+}
+
+.advTitle:after {
+    display: block;
+    content: '';
+    position: absolute;
+    border: 2px solid #4cc4f4;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .advantages p {
     font-family: Roboto;
     font-weight: 300;
     font-size: 17px;
-    line-height: 30px;
+    line-height: 27px;
+    margin-top: 30px;
 }
 
 .advantages h3 {
     font-family: Roboto;
     font-size: 21px;
-    line-height: 27px;
     font-weight: 400;
+
 }
 
 .advantages .logoWords span {
@@ -836,14 +1084,128 @@ h1 > span {
 
 .advantages span[class^="icon"] {
     font-size: 43px;
+    position: absolute;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1db7f0+0,7e37d0+100 */
+    background: rgb(29,183,240); /* Old browsers */
+    background: -moz-linear-gradient(30deg, rgba(29,183,240,1) 0%, rgba(126,55,208,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(30deg, rgba(29,183,240,1) 0%,rgba(126,55,208,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(30deg, rgba(29,183,240,1) 0%,rgba(126,55,208,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1db7f0', endColorstr='#7e37d0',GradientType=1 ); /* IE6-9 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+.advantages:after {
+    content: '';
+    position: absolute;
+    background: url("../img/png/phone.png") no-repeat;
+    left: 50%;
+    margin-left: -208px;
+    z-index: 2;
+    width: 417px;
+    height: 617px;
+    top: 497px;
+}
+
+.advItems {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 175px;
+}
+
+.advLeft {
+    text-align: right;
+    display: grid;
+    grid-template-rows: repeat(3, 73px);
+    grid-row-gap: 60px;
+    margin: 20px 305px 0 0;
+
+}
+
+.advRight {
+    text-align: left;
+    display: grid;
+    grid-template-rows: repeat(3, 73px);
+    grid-row-gap: 60px;
+    margin: 20px 0 0 315px;
+}
+
+.advItems li {
+    position: relative;
+}
+
+.advLeft li:after {
+    content: '';
+    width: 73px;
+    height: 73px;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    background-color: #ffffff;
+    right: -90px;
+    top: -15px;
+
+}
+
+.advRight li:before {
+    content: '';
+    width: 73px;
+    height: 73px;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    background-color: #ffffff;
+    left: -90px;
+    top: -15px;
+}
+.advItems span{
+    position: relative;
+}
+.advLeft span[class^="icon"]{
+    right: -73px;
+    top: 0;
+    z-index: 3;
+}
+.advRight span[class^="icon"]{
+    left: -73px;
+    top: 0;
+    z-index: 3;
+}
 /*Преимущества конец*/
 
 /*Партнёрская программа начало*/
+
 .partnersProgram {
-    background: url("../img/png/2hands.png") left top -290px no-repeat,url("../img/png/partnerbc.png") left -412px top -565px no-repeat ,linear-gradient(to left, #359ccb, #6b4fbf);
     height: 799px;
+    position: relative;
+}
+
+.partnersProgram:after {
+    position: absolute;
+    content: '';
+    width: 1920px;
+    height: 799px;
+    left: 50%;
+    top: 0;
+    z-index: -2;
+    margin-left: -960px;
+    background: url("../img/png/partnerbc.png") left -412px top -565px no-repeat, linear-gradient(to left, #359ccb, #6b4fbf);
+}
+
+.partnersProgram:before {
+    position: absolute;
+    content: '';
+    height: 1036px;
+    width: 1016px;
+    left: 0;
+    top: 0;
+    background: url("../img/png/2hands.png") left top -290px no-repeat;
+}
+
+.partnerContent {
+    margin-left: 589px;
+    text-align: center;
 }
 
 .partnersProgram h2 {
@@ -851,6 +1213,7 @@ h1 > span {
     text-transform: uppercase;
     font-size: 33px;
     line-height: 30px;
+    padding: 142px 44px 54px 44px;
 }
 
 .affItems p {
@@ -864,6 +1227,44 @@ h1 > span {
     font-weight: 700;
     font-size: 33px;
     line-height: 36px;
+}
+
+.affItems {
+    margin-top: 22px;
+}
+
+.affItems li {
+    height: 103px;
+    width: 569px;
+    background-color: rgba(51, 51, 51, 0.34);
+}
+
+.affItems li + li {
+    margin-top: 20px;
+}
+
+.partnerFooter {
+    width: 100%;
+    margin-top: 62px;
+    background-color: #1f2847;
+    height: 140px;
+    position: relative;
+}
+
+.partnerFooter:after {
+    content: '';
+    position: absolute;
+    height: 54px;
+    width: 571px;
+    background-image: url(../img/png/con_footer.png);
+    top: -40px;
+    right: 385px;
+    z-index: -1;
+}
+
+.partnersProgram .connectWhite {
+    margin-left: 650px;
+
 }
 
 /*Партнёрская программа конец*/
@@ -880,14 +1281,16 @@ h1 > span {
     line-height: 30px;
     margin: 0 auto;
 }
+
 .news h4 {
     font-size: 14px;
     line-height: 50px;
     text-transform: uppercase;
 }
-.newsMainTitle{
+
+.newsMainTitle {
     position: relative;
-    margin: 0 auto ;
+    margin: 0 auto;
 
     width: 453px;
     text-align: center;
@@ -922,6 +1325,7 @@ h1 > span {
     right: 0;
     z-index: 2;
 }
+
 .date {
     font-family: Roboto;
     font-weight: 700;
@@ -941,7 +1345,8 @@ h1 > span {
     background: linear-gradient(to right, rgba(80, 189, 239, 1) 0%, rgba(127, 97, 220, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50bdef', endColorstr='#7f61dc', GradientType=1);
 }
-.item_news .date{
+
+.item_news .date {
     float: left;
 }
 
@@ -953,13 +1358,36 @@ h1 > span {
     text-transform: uppercase;
     position: relative;
 }
-.current_news_content{
+
+.current_news_content {
     margin: 176px 0 0 25px;
+
 }
+
+.current_news > div {
+    z-index: 2;
+    position: relative;
+
+}
+
+.current_news:after {
+    content: '';
+    position: absolute;
+    height: 367px;
+    width: 570px;
+    left: 50%;
+    margin-left: -285px;
+    top: 0;
+    background-color: rgba(0, 0, 73, 0.4);
+    z-index: 1;
+
+}
+
 .newsContent {
     border: 1px solid #cfd7dd;
     border-top: none;
     padding: 9px 0 13px 17px;
+    display: none;
 }
 
 .newsItem h3 {
@@ -968,10 +1396,11 @@ h1 > span {
 }
 
 .news .current_news {
-    background:  right center  no-repeat;
+    background: right center no-repeat;
     width: 570px;
     height: 367px;
     grid-row: 1 / -1;
+    position: relative;
 }
 
 .news .current_news h3 {
@@ -1014,10 +1443,12 @@ h1 > span {
     height: 73px;
 
 }
-.newsHeaderTitle{
+
+.newsHeaderTitle {
     display: inline-block;
     margin-top: 13px;
 }
+
 .newsList span[class='icon-robot'] {
     font-size: 16px;
     color: #9b9fad;
@@ -1027,37 +1458,42 @@ h1 > span {
 
 }
 
-.newsList .yourRobot{
+.newsList .yourRobot {
     color: #9b9fad;
     font-size: 13px;
     line-height: 24px;
 
 }
-.yourRobot{
+
+.yourRobot {
     margin-left: 15px;
     position: relative;
 }
-.item_news h3{
+
+.item_news h3 {
     margin-left: 15px;
 }
-.item_news .yourRobot{
+
+.item_news .yourRobot {
     margin-left: 38px;
 }
 
 .newsList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 173px 73px 73px;
+    grid-template-rows: repeat(3, auto);
     margin-top: 90px;
     grid-row-gap: 24px;
     grid-column-gap: 30px;
 }
-.allNews{
+
+.allNews {
     height: 50px;
     width: 192px;
     margin: 105px auto;
     line-height: 45px;
 }
+
 .newsMore {
     font-size: 31px;
     line-height: 54px;
@@ -1068,20 +1504,26 @@ h1 > span {
     line-height: 22px;
 }
 
+.current_news_content p, .current_news_content .yourRobot {
+    color: #ced9e1;
+}
+
 /*Новости конец*/
 
 /*Способы оплаты*/
 .payments {
-    background: url("../img/png/payleft.png") top left no-repeat,url("../img/png/payright.png") bottom -381px right -84px  no-repeat,linear-gradient(to left, #359ccb, #6b4fbf);
+    background: url("../img/png/payleft.png") top left no-repeat, url("../img/png/payright.png") bottom -381px right -84px no-repeat, linear-gradient(to left, #359ccb, #6b4fbf);
     height: 390px;
 
 }
-.payItems{
+
+.payItems {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 128px;
 }
+
 /*Способы оплаты конец*/
 
 /*Футер*/
@@ -1097,21 +1539,26 @@ footer .connect * {
     font-weight: 700;
     line-height: 54px;
 }
-footer .connectWhite{
+
+footer .connectWhite {
     margin: 0 auto;
 }
-footer .connectWhite span[class^="icon"]{
+
+.connectWhite span[class^="icon"] {
     font-size: 30px;
 }
-footer:after{
+
+footer:after {
     content: '';
     position: absolute;
     height: 54px;
     width: 571px;
     background-image: url(../img/png/con_footer.png);
-    top: -54px;
+    top: -53px;
     left: calc(50% - 285px);
+
 }
+
 .topFooter span[class^="icon"] {
     position: absolute;
     left: -26px;
@@ -1190,6 +1637,7 @@ footer .social .row3 {
 .topFooter .social ul {
     display: inline-block;
 }
+
 .topFooter .social ul:last-child {
     margin-left: 124px;
 }
@@ -1201,8 +1649,11 @@ footer .social .row3 {
     padding-top: 30px;
 
 }
+
 footer .menu {
-    justify-content: center;}
+    justify-content: center;
+}
+
 .affiliate {
     background-color: #f0f4f7;
 }
@@ -1213,4 +1664,36 @@ footer .menu {
 
 .referralItems p {
     color: #9da4bd;
+}
+
+.marketing .line:after {
+    display: none;
+}
+
+.ratesInfo .ratesEdge {
+    height: 845px;
+    background-color: #f0f4f7;
+}
+
+.marketing {
+    height: 755px;
+    background-color: #ffffff;
+}
+
+.ratesEdge p {
+    padding: 35px 0 0 19px;
+    text-align: left;
+}
+
+.ratesEdge .card {
+    grid-template-rows: 138px 497px;
+}
+
+.ratesEdge .upgrade {
+    margin-top: 37px;
+}
+
+.marketingInner li {
+    width: 50%;
+    float: left;
 }
