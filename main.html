@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="bodyWrap">
@@ -27,7 +29,10 @@
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
                 <div class="langConnect">
-                    <div class="lang" style="background-image: url(img/jpg/rus.jpg)">
+                    <div class="lang newsHeader">
+                        <div class="langitem "><span>EN</span></div>
+                        <div class="langitem "><span>CH</span></div>
+                        <div class="langitem activelang"><span>RU</span></div>
                     </div>
                     <div class="connect">
                         <span class="icon-telegram"></span><a href="#">Подключиться</a>
@@ -133,9 +138,9 @@
                 <div class="calcWrapper">
                     <div class="calcTitle">
                         <h2>Калькулятор прибыли</h2>
-                        <h4>Расчитайте свою прибыль</h4>
+                        <h4>Рассчитайте свою прибыль</h4>
                     </div>
-                    <form action="" class="calcChangeLine">
+                    <form action="" class="calcChangeLine cfix">
                         <fieldset>
                             <label for="calcLine">Выберите линию:</label>
                             <select name="" id="calcLine">
@@ -179,79 +184,66 @@
     <div class="certificate">
         <div class="container">
             <div class="certTitle">
-                <span>BBI</span>
+                <span>BBi</span>
                 <h2>Business bot incubator</h2>
                 <h4>Мир инновационных технологий!</h4>
             </div>
-            <div>
-                <div>
-                    <p>Инновационные идеи и технологии давно и прочно вошли в жизнь
-                        пользователей Интернет. <span>Business Bot Incubator (BBI)</span> был
-                        создан в соответствии с современными
-                        тенденциями. Это новый этап в мире
-                        инвестиций. Каждый сомневающийся в своих
-                        решениях человек может создать неверный выбор.
-                        Но что если вместо человека будет принимать решения
-                        робот, работающий в рамках одного алгоритма?</p>
-                    <p>Эта система облегчит жизнь многих инвесторов.
-                        Программные боты будут обеспечивать аюсолютную безопасность
-                        проведения платежей и полную защиту средств, размещённых на
-                        балансе Вашего аккаунта! <span>Основная задача наших
+            <div class="cfix certContent">
+                <p>Инновационные идеи и технологии давно и прочно вошли в жизнь
+                    пользователей Интернет. <span>Business Bot Incubator (BBI)</span> был
+                    создан в соответствии с современными
+                    тенденциями. Это новый этап в мире
+                    инвестиций. Каждый сомневающийся в своих
+                    решениях человек может создать неверный выбор.
+                    Но что если вместо человека будет принимать решения
+                    робот, работающий в рамках одного алгоритма?</p>
+                <p>Эта система облегчит жизнь многих инвесторов.
+                    Программные боты будут обеспечивать аюсолютную безопасность
+                    проведения платежей и полную защиту средств, размещённых на
+                    балансе Вашего аккаунта! <span>Основная задача наших
                     разработчиков - дальнейшее развитие BBI-ботов.</span>
-                        Только взаимный успех принесет новое всеобщее развитие
-                        и процветание.</p>
-                </div>
-                <div>
-                    <img src="img/jpg/sert.jpg" alt="сертификат">
-                </div>
+                    Только взаимный успех принесет новое всеобщее развитие
+                    и процветание.</p>
+                <img src="img/jpg/sert.jpg" alt="сертификат">
             </div>
         </div>
     </div>
     <div class="advantages">
         <div class="container">
-            <div>
-                <div>
+            <div class="advMainTitle">
+                <div class="advTitle">
                     <h2>Преимущества компании</h2>
                     <h4>Почему выбирают нас?</h4>
                 </div>
                 <div>
                     <h3>Инвестиции в BBI выгодно отличаются от интернет-инвестиций в другие программы. </h3>
                     <p>Здесь о Ваших средствах заботятся и грамотно ими управляют уникальные BBI-боты.
-                        Каждый BBI-бот оснащён бонусным апгрейдом,
+                        Каждый BBI-бот оснащён бонусным апгрейдом,<br>
                         который способствует увеличению получаемой прибыли!</p>
                 </div>
             </div>
-            <div>
+            <div class="advItems">
                 <ul class="advLeft">
-                    <li><span>УНИКАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ БОТЫ</span><span class="icon-robot"></span></li>
-                    <li><span>ПАРТНЕРСКАЯ ПРОГРАММА ДО 10%</span><span class="icon-peoples"></span></li>
-                    <li><span>НАЧИСЛЕНИЯ КАЖДЫЕ 24 ЧАСА</span><span class="icon-ring"></span></li>
+                    <li><span>УНИКАЛЬНЫЕ<br>ИНВЕСТИЦИОННЫЕ БОТЫ</span><span class="icon-robot"></span></li>
+                    <li><span>ПАРТНЕРСКАЯ<br>ПРОГРАММА ДО 10%</span><span class="icon-peoples"></span></li>
+                    <li><span>НАЧИСЛЕНИЯ КАЖДЫЕ<br>24 ЧАСА</span><span class="icon-ring"></span></li>
                 </ul>
-                <div class="phoneAdv">
-                    <div class="logo">
-                        <img src="img/png/logoletters2.png" alt="">
-                        <div class="logoWords">
-                            <img src="" alt="">
-                            <span>BUSINESS</span><span>BOT</span><span>INCUBATOR</span>
-                        </div>
-                    </div>
-                </div>
                 <ul class="advRight">
-                    <li><span class="icon-gear"></span><span>КВАЛИФИЦИРОВАННАЯ ПОДДЕРЖКА</span></li>
-                    <li><span class="icon-pocket"></span><span>ВЫВОД СРЕДСТВ В РЕЖИМЕ ИНСТАНТ</span></li>
-                    <li><span class="icon-lines_adv"></span><span>ВОЗМОЖНОСТЬ УВЕЛИЧЕНИЯ ПРИБЫЛИ</span></li>
+                    <li><span class="icon-gear"></span><span>КВАЛИФИЦИРОВАННАЯ<br>ПОДДЕРЖКА</span></li>
+                    <li><span class="icon-pocket"></span><span>ВЫВОД СРЕДСТВ В<br>РЕЖИМЕ ИНСТАНТ</span></li>
+                    <li><span class="icon-lines_adv"></span><span>ВОЗМОЖНОСТЬ<br>УВЕЛИЧЕНИЯ ПРИБЫЛИ</span></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="partnersProgram">
         <div class="container">
-            <div>
+            <div class="partnerContent">
                 <h2>Партнерская программа</h2>
                 <div class="affItems">
                     <ul>
-                        <li><p>Размер реферальных начислений на начальном этапе составляет
-                            <span>5%</span> от вклада вашего партнера.</p></li>
+                        <li><p>Размер реферальных начислений на начальном этапе составляет<br>
+                            <span>5%</span><br>от вклада вашего партнера.</p></li>
                         <li><p>Для тех, кто сделает оборот структуры выше 500$, BBI-боты
                             сгенерируют повышенный процент и увеличат размер начислений на
                             <span>1%</span></p></li>
@@ -259,11 +251,16 @@
                             начислений на 1%, максимальная отметка достигает <span>10%</span></p></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div class="partnerFooter">
+            <div class="container">
                 <div class="connectWhite">
                     <div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div>
                 </div>
             </div>
         </div>
+
     </div>
     <div class="news">
         <div class="container">
@@ -271,19 +268,32 @@
                 <h2>Новости компании</h2>
                 <h4>Последние события</h4>
             </div>
-
-            <div class="newsList">
-                <div class="current_news" style="background-image: url(img/jpg/Layer-90.jpg)">
+            <ul class="newsList">
+                <li class="current_news" style="background-image: url(img/jpg/Layer-90.jpg)">
                     <div class="date"><span class="day">11</span><span class="month">Ноя</span></div>
                     <div class="current_news_content"><h3>Линия бесконечности. Разделение депозитов.</h3>
                         <p>В процессе изучения новых программных кодов, Ботами была<br>освоена новая ветка депозитов!...
                             <a href="#">Подробнее ></a></p>
                         <span class="yourRobot"><span class="icon-robot"></span>Ваш бот BBI</span></div>
-                </div>
-                <div class="item_news cfix">
+                </li>
+                <li class="item_news cfix ">
                     <div class="newsHeader">
                         <div class="date"><span class="day">07</span><span class="month">Ноя</span></div>
                         <div class="newsHeaderTitle"><h3>Новый бот BIT. Партнерская программа.</h3>
+                            <span class="yourRobot"><span class="icon-robot"></span>Ваш бот BBI</span></div>
+                    </div>
+                    <div class="newsContent active">
+                        <p>Сегодня совместными усилиями Боты завершили все части и наброски программных кодов, в
+                            течении
+                            их напряженной работы проявилось что-то нечто яркого цвета, а в итоге объединения
+                            программного
+                            кода воссоздался некто. <a href="#">Подробнее ></a></p>
+                    </div>
+                </li>
+                <li class="item_news cfix ">
+                    <div class="newsHeader cfix">
+                        <div class="date"><span class="day">02</span><span class="month">Ноя</span></div>
+                        <div class="newsHeaderTitle"><h3>Ссылки.Чат Eng.Раздел</h3>
                             <span class="yourRobot"><span class="icon-robot"></span>Ваш бот BBI</span></div>
                     </div>
                     <div class="newsContent">
@@ -293,30 +303,25 @@
                             программного
                             кода воссоздался некто. <a href="#">Подробнее ></a></p>
                     </div>
-                </div>
-                <div class="item_news cfix">
+                </li>
+                <li class="item_news">
                     <div class="newsHeader cfix">
-                        <div class="date"><span class="day">02</span><span class="month">Ноя</span></div>
-                        <div class="newsHeaderTitle"><h3>Ссылки.Чат Eng.Раздел</h3>
-                            <span class="yourRobot"><span class="icon-robot"></span>Ваш бот BBI</span></div>
-                    </div>
-                    <div>
-                    </div>
-                </div>
-                <div class="item_news">
-                    <div class="newsHeader">
                         <div class="date"><span class="day">31</span><span class="month">Ноя</span></div>
                         <div class="newsHeaderTitle"><h3>Business Bot Incubator</h3>
                             <span class="yourRobot"><span class="icon-robot"></span>Ваш бот BBI</span></div>
                     </div>
-                    <div>
+                    <div class="newsContent">
+                        <p>Сегодня совместными усилиями Боты завершили все части и наброски программных кодов, в
+                            течении
+                            их напряженной работы проявилось что-то нечто яркого цвета, а в итоге объединения
+                            программного
+                            кода воссоздался некто. <a href="#">Подробнее ></a></p>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
             <div class="allNews connect">
                 <a href="#">ВСЕ НОВОСТИ</a>
             </div>
-
         </div>
     </div>
     <div class="payments">
@@ -331,7 +336,6 @@
     </div>
     <footer>
         <div class="container">
-
             <div class="connectWhite">
                 <div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div>
             </div>
