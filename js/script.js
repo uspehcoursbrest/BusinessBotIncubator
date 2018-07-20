@@ -17,7 +17,7 @@ $(document).ready(function () {
         $('.questionItem').removeClass('active').css({background: 'linear-gradient(to right, rgba(80,189,239,1) 0%,rgba(128,97,220,1) 100%)'});
         $(this).addClass('active');
         accordFaq.find('span').css({color: '#ffffff'})
-        accordFaq.find('.questionItem:not(.active)').css({background: 'transparent'});
+        accordFaq.find('.questionItem:not(.active)').css({background: '#ffffff'});
         accordFaq.find('.questionItem:not(.active)').find('span').css({color: 'inherit'})
         accordFaq.find('.questionItem:not(.active)').siblings('.answer').stop().slideUp();
         accordFaq.find('.questionItem:not(.active)').find('.questionMark').css({background: 'linear-gradient(122deg, rgba(80,189,239,1) 0%,rgba(128,97,220,1) 100%)'});
