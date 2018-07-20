@@ -60,7 +60,7 @@ $(document).ready(function () {
             from: val
         });
     });
-// Язые
+// Языr
     $( ".activelang" ).click(function() {
         $( "#slideDown" ).slideToggle( function() {
         });
