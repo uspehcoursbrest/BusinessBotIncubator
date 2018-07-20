@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
-<header>
+<header class="sitesHeader">
     <div class="container">
         <div class="topHeader">
             <div class="logo invisLink">
@@ -26,22 +29,22 @@
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
             <div class="langConnect">
-                <div class="lang newsHeader">
-                    <div class="langitem "><span>EN</span></div>
-                    <div class="langitem "><span>CH</span></div>
-                    <div class="langitem activelang"><span>RU</span></div>
+                <div class="lang">
+                    <div class="langitem activelang"><a>RU</a></div>
+                    <div id="slideDown">
+                        <div class="langitem ch"><a>CH</a></div>
+                        <div class="langitem en"><a>EN</a></div>
+                    </div>
                 </div>
                 <div class="connect">
                     <span class="icon-telegram"></span><a href="#">Подключиться</a>
                 </div>
             </div>
         </div>
-        <div class="banner">
-            <div class="bannerWrapper">
-                <div class="companyName"><span>B</span><span>B</span><span>i</span></div>
-                <h1>Мир инновационных<br><span>технологий!</span></h1>
-                <div class="connect">
-                    <span class="icon-telegram"></span><a href="#">Подключиться</a>
+        <div class="sitesTitleWrapper">
+            <div class="sitesTitle">
+                <div class="sitesBorder">
+                    <h1>FAQ</h1>
                 </div>
             </div>
         </div>
@@ -56,158 +59,198 @@
                     <p>В данном разделе мы собрали самые часто задаваемые вопросы. Если вдруг Вы не нашли нужного для
                         Вас
                         вопроса
-                        пишите нам в службку поддеркжи: <span></span><span>@Business_Bot_Incubator</span></p>
+                        пишите нам в службку поддеркжи: <span class="bbiLink">@Business_Bot_Incubator</span></p>
                 </div>
             </div>
-            <div class="questions">
+            <div class="questions cfix">
                 <div class="questLeft">
                     <div>
-                        <div><span>?</span>
-                            <span>Что это за сайт?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Что это за сайт?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Что такое Telegram?</span>
-                            <div>
-                                <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
-                                    текста
-                                    можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
-                                    подключать инновационных Роботов.</p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Что такое Telegram?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Как создать депозит через инновационных Роботов в Telegram?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Как создать депозит через инновационных Роботов в Telegram?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Участвовать может любой человек?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Участвовать может любой человек?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>У меня нет денег на счете той электронной платежной системы,
-                                с которой вы работаете. Что мне делать?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>У меня нет денег на счете. Что мне делать?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Я могу заработать, пока ожидаю время окончания срока депозита?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Я могу заработать, пока ожидаю время окончания срока депозита?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>А я могу зарабатывать, не открывая депозит?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>А я могу зарабатывать, не открывая депозит?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Как мне привлечь рефералов?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Как мне привлечь рефералов?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Я могу открыть несколько аккаунтов с одного компьютера?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                 </div>
                 <div class="questRight">
                     <div>
-                        <div><span>?</span>
-                            <span>Как узнать своего пригласителя?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Как узнать своего пригласителя?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Я могу открыть несколько аккаунтов с одного компьютера?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Я могу открыть несколько аккаунтов с одного компьютера?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>В течении какого времени деньги поступят на мой кошелек?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>В течении какого времени деньги поступят на мой кошелек?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Какой минимум и максимум на ввод и вывод?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Какой минимум и максимум на ввод и вывод?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Есть ли ограничение создания депозитов?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Есть ли ограничение создания депозитов?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Когда мне начисляется прибыль?</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Когда мне начисляется прибыль?</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Чем я могу помочь в развитии BUSINESS BOT INCUBATOR? </span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Чем я могу помочь в развитии BUSINESS BOT INCUBATOR? </span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Я ничего не понял(а) / я не нашел(шла) ответ на свой вопрос</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Я ничего не понял(а) / я не нашел(шла) ответ на свой вопрос</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                     <div>
-                        <div><span>?</span>
-                            <span>Я не нашел где ввести номер моего электронного кошелька</span>
-                            <div>
-                                <p></p>
-                            </div>
+                        <div class="questionItem cfix"><div class="questionMark"><span>?</span></div>
+                            <span>Я не нашел где ввести номер моего электронного кошелька</span></div>
+                        <div class="answer">
+                            <p>Telegram – это бесплатное приложение для обмена информацией (мессенджер), кроме
+                                текста
+                                можно отправлять файлы, посылать друг другу музыку, видео и фотоизображения, а также
+                                подключать инновационных Роботов.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="payments">
+    <div class="payments paymentsFaq">
         <div class="container">
             <ul class="payItems">
                 <li><img src="img/png/pay1.png" alt="perfect money"></li>
@@ -251,33 +294,33 @@
                     <li>
                         <span class="icon-telegram row2"></span><span
                             class="footerInfoTitle row2">Support team:<br></span>
-                        <span class="footerInfo">@Business_Bot_Incubator</span>
+                        <a href="#" class="footerInfo">@Business_Bot_Incubator</a>
                     </li>
                     <li>
                         <span class="icon-mail-envelope-closed row2"></span><span
                             class="footerInfoTitle row2">E-mail:<br></span>
-                        <span class="footerInfo">support@bbi.world</span>
+                        <a href="#" class="footerInfo">support@bbi.world</a>
                     </li>
                     <li>
                         <span class="icon-vk row2"></span><span
                             class="footerInfoTitle row2">Vkontakte:<br></span>
-                        <span class="footerInfo">business_bot_incubator</span>
+                        <a href="#" class="footerInfo">business_bot_incubator</a>
                     </li>
                 </ul>
                 <ul>
                     <li>
                         <span class="icon-telegram row3"></span><span
                             class="footerInfoTitle row3">BBI CHAT RUS:<br></span>
-                        <span class="footerInfo">telegram_ row3bbi_chat_rus</span>
+                        <a href="#" class="footerInfo">telegram_ row3bbi_chat_rus</a>
                     </li>
                     <li>
                         <span class="icon-telegram row3"></span><span
                             class="footerInfoTitle row3">BBI CHAT ENG:<br></span>
-                        <span class="footerInfo">telegram_bbi_chat_eng</span>
+                        <a href="#" class="footerInfo">telegram_bbi_chat_eng</a>
                     </li>
                     <li>
                         <span class="icon-telegram row3"></span><span class="footerInfoTitle row3">BBI CHAT ХИНДИ (हिन्दी चैट):<br></span>
-                        <span class="footerInfo">telegram_bbi_chat_eng</span>
+                        <a href="#" class="footerInfo">telegram_bbi_chat_eng</a>
                     </li>
                 </ul>
             </div>
