@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
-<header>
+<header class="sitesHeader">
     <div class="container">
         <div class="topHeader">
             <div class="logo invisLink">
@@ -26,109 +29,73 @@
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
             <div class="langConnect">
-                <div class="lang newsHeader">
-                    <div class="langitem "><span>EN</span></div>
-                    <div class="langitem "><span>CH</span></div>
-                    <div class="langitem activelang"><span>RU</span></div>
+                <div class="lang">
+                    <div class="langitem activelang"><a>RU</a></div>
+                    <div id="slideDown">
+                        <div class="langitem ch"><a>CH</a></div>
+                        <div class="langitem en"><a>EN</a></div>
+                    </div>
                 </div>
                 <div class="connect">
                     <span class="icon-telegram"></span><a href="#">Подключиться</a>
                 </div>
             </div>
         </div>
-        <div class="banner">
-            <div class="bannerWrapper">
-                <div class="companyName"><span>B</span><span>B</span><span>i</span></div>
-                <h1>Мир инновационных<br><span>технологий!</span></h1>
-                <div class="connect">
-                    <span class="icon-telegram"></span><a href="#">Подключиться</a>
+        <div class="sitesTitleWrapper">
+            <div class="sitesTitle">
+                <div class="sitesBorder">
+                    <h1>Партнёрам</h1>
                 </div>
             </div>
         </div>
     </div>
 </header>
 <div class="content">
-    <div>
         <div class="container">
             <div class="affiliate">
-                <div>
+                <div class="affiliateTitle">
                     <h2>ПАРТНЕРСКАЯ ПРОГРАММА</h2>
                     <p>BBI-боты сгенерировали для Вас уникальную партнерскую программу.</p>
                 </div>
-                <div>
-                    <div><p>Размер реферальных начислений на начальном этапе составляет <span>5%</span> от вклада вашего
-                        партнера.</p></div>
-                    <div><p>Для тех, кто сделает оборот структуры свыше <span>500$</span>, BBI-боты сгенерируют
+                <ul class="partnerItems cfix">
+                    <li><p>Размер реферальных<br>начислений на начальном этапе<br>составляет<br><span class="affTitlePercent">5%</span><br>от вклада вашего
+                        партнера.</p></li>
+                    <li><p>Для тех, кто сделает оборот<br>структуры свыше <span class="uhh"> 500$</span>,<br> BBI-боты сгенерируют<br>
                         повышенный
-                        процент и увеличат размер начислений на
-                        <span>1%</span></p></div>
-                    <div>Каждые последующие <span>500$</span> будут увеличивать Ваш партнерский процент начислений на
-                        <span>1%</span>,
-                        максимальная отметка достигает
-                        <span>10%</span></div>
-                </div>
+                        процент и увеличат размер начислений на<br>
+                        <span class="affTitlePercent">1%</span></p></li>
+                    <li><p>Каждые последующие <span>500$</span><br>будут увеличивать Ваш<br>партнерский процент начислений<br>на
+                        <span class="uhh">1%</span>,
+                        максимальная отметка<br>достигает<br>
+                        <span class="affTitlePercent">10%</span></p></li>
+                </ul>
             </div>
         </div>
-    </div>
     <div class="referralItems">
         <div class="container">
-            <div>
+            <div class="partnerStuff">
                 <div>
-                    <div>
-                        <div class="logo">
-                            <img src="img/png/logoLetters.png" alt="">
-                            <div class="logoWords">
-                                <span>BUSINESS</span><span>BOT</span><span>INCUBATOR</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span></span><span></span><span></span>
-                            <span>TEST</span><span>POWER</span><span>ULTIMATUM</span>
-                        </div>
+                    <div class="stuff1" style="background-image: url(img/jpg/stuff1.jpg);">
                     </div>
-                    <div>
+                    <div class="stuff1content">
                         <p>&#60;a href="https://bbi.world/index/go/ref/0"> &#60;img
                             src="http://bbi.world/img/468x60_ru.gif">&#60/a&#62;</p>
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <div class="logo">
-                            <img src="img/png/logoLetters.png" alt="">
-                            <div class="logoWords">
-                                <span>BUSINESS</span><span>BOT</span><span>INCUBATOR</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span></span><span></span><span></span>
-                            <span>TEST</span><span>POWER</span><span>ULTIMATUM</span>
-                        </div>
+                    <div class="stuff2" style="background-image: url(img/jpg/stuff2.jpg);">
                     </div>
-                    <div>
+                    <div class="stuff2content">
                         <p>&#60;a href="https://bbi.world/index/go/ref/0"> &#60;img
                             src="http://bbi.world/img/728x90_ru.gif">&#60/a&#62;</p>
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <div class="logo">
-                            <img src="img/png/logoLetters.png" alt="">
-                            <div class="logoWords">
-                                <span>BUSINESS</span><span>BOT</span><span>INCUBATOR</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span></span>
-                            <span>TEST</span>
-                        </div>
-                        <div>
-                            <span>1%</span><span>в сутки</span>
-                            <span>15</span><span>дней</span>
-                        </div>
+                    <div class="stuff3" style="background-image: url(img/jpg/stuff3.jpg);">
                     </div>
-                    <div>
-                        <p>&#60;a href="https://bbi.world/index/go/ref/0"> &#60;img
-                            src="http://bbi.world/img/200x300_ru.gif">&#60/a&#62;</p>
+                    <div class="stuff3content">
+                        <p>&#60;a<br>href="https://bbi.world/i<br>ndex/go/ref/0"> &#60;img<br>
+                            src="http://bbi.world/im<br>g/200x300_ru.gif">&#60/a&#62;</p>
                     </div>
                 </div>
             </div>
@@ -178,33 +145,33 @@
                     <li>
                         <span class="icon-telegram row2"></span><span
                             class="footerInfoTitle row2">Support team:<br></span>
-                        <span class="footerInfo">@Business_Bot_Incubator</span>
+                        <a href="#" class="footerInfo">@Business_Bot_Incubator</a>
                     </li>
                     <li>
                         <span class="icon-mail-envelope-closed row2"></span><span
                             class="footerInfoTitle row2">E-mail:<br></span>
-                        <span class="footerInfo">support@bbi.world</span>
+                        <a href="#" class="footerInfo">support@bbi.world</a>
                     </li>
                     <li>
                         <span class="icon-vk row2"></span><span
                             class="footerInfoTitle row2">Vkontakte:<br></span>
-                        <span class="footerInfo">business_bot_incubator</span>
+                        <a href="#" class="footerInfo">business_bot_incubator</a>
                     </li>
                 </ul>
                 <ul>
                     <li>
                         <span class="icon-telegram row3"></span><span
                             class="footerInfoTitle row3">BBI CHAT RUS:<br></span>
-                        <span class="footerInfo">telegram_ row3bbi_chat_rus</span>
+                        <a href="#" class="footerInfo">telegram_ row3bbi_chat_rus</a>
                     </li>
                     <li>
                         <span class="icon-telegram row3"></span><span
                             class="footerInfoTitle row3">BBI CHAT ENG:<br></span>
-                        <span class="footerInfo">telegram_bbi_chat_eng</span>
+                        <a href="#" class="footerInfo">telegram_bbi_chat_eng</a>
                     </li>
                     <li>
                         <span class="icon-telegram row3"></span><span class="footerInfoTitle row3">BBI CHAT ХИНДИ (हिन्दी चैट):<br></span>
-                        <span class="footerInfo">telegram_bbi_chat_eng</span>
+                        <a href="#" class="footerInfo">telegram_bbi_chat_eng</a>
                     </li>
                 </ul>
             </div>

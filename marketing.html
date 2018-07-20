@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
 <div class="bodyWrap">
-    <header>
+    <header class="sitesHeader">
         <div class="container">
             <div class="topHeader">
                 <div class="logo invisLink">
@@ -28,22 +31,22 @@
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
                 <div class="langConnect">
-                    <div class="lang newsHeader">
-                        <div class="langitem "><span>EN</span></div>
-                        <div class="langitem "><span>CH</span></div>
-                        <div class="langitem activelang"><span>RU</span></div>
+                    <div class="lang">
+                        <div class="langitem activelang"><a>RU</a></div>
+                        <div id="slideDown">
+                            <div class="langitem ch"><a>CH</a></div>
+                            <div class="langitem en"><a>EN</a></div>
+                        </div>
                     </div>
                     <div class="connect">
                         <span class="icon-telegram"></span><a href="#">Подключиться</a>
                     </div>
                 </div>
             </div>
-            <div class="banner">
-                <div class="bannerWrapper">
-                    <div class="companyName"><span>B</span><span>B</span><span>i</span></div>
-                    <h1>Мир инновационных<br><span>технологий!</span></h1>
-                    <div class="connect">
-                        <span class="icon-telegram"></span><a href="#">Подключиться</a>
+            <div class="sitesTitleWrapper">
+                <div class="sitesTitle">
+                    <div class="sitesBorder">
+                        <h1>Маркетинг</h1>
                     </div>
                 </div>
             </div>
@@ -107,11 +110,11 @@
                                     class="cardName">TEST</span>
                             </div>
                             <div class="itemsContent">
-                                <p>BBI-бот «TEST» имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
-                                    5$ до 50$. Срок работы депозита у данного BBI-бота составляет 15 дней при доходности
-                                    1% в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
-                                    от данного BBI-бота на 0.05%. Тело депозита возвращается после окончания срока
-                                    депозита. Чистая прибыль составляет 15% от суммы депозита.</p>
+                                <p><span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
+                                    <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота составляет <span>15 дней</span> при доходности
+                                    <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
+                                    от данного BBI-бота на  <span>0.05%</span>. Тело депозита возвращается после окончания срока
+                                    депозита. Чистая прибыль составляет  <span>15%</span> от суммы депозита.</p>
                                 <div class="upgrade">
                                     <div><a href="">Подключиться</a></div>
                                 </div>
@@ -122,11 +125,11 @@
                                     class="cardName">TEST</span>
                             </div>
                             <div class="itemsContent">
-                                <p>BBI-бот «TEST» имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
-                                    5$ до 50$. Срок работы депозита у данного BBI-бота составляет 15 дней при доходности
-                                    1% в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
-                                    от данного BBI-бота на 0.05%. Тело депозита возвращается после окончания срока
-                                    депозита. Чистая прибыль составляет 15% от суммы депозита.</p>
+                                <p> <span>BBI-бот «TEST» </span>имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
+                                    <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота составляет  <span>15 дней</span> при доходности
+                                    <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
+                                    от данного BBI-бота на  <span>0.05%</span>. Тело депозита возвращается после окончания срока
+                                    депозита. Чистая прибыль составляет  <span>15%</span> от суммы депозита.</p>
                                 <div class="upgrade">
                                     <div><a href="">Подключиться</a></div>
                                 </div>
@@ -137,11 +140,11 @@
                                     class="cardName">TEST</span>
                             </div>
                             <div class="itemsContent">
-                                <p>BBI-бот «TEST» имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
-                                    5$ до 50$. Срок работы депозита у данного BBI-бота составляет 15 дней при доходности
-                                    1% в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
-                                    от данного BBI-бота на 0.05%. Тело депозита возвращается после окончания срока
-                                    депозита. Чистая прибыль составляет 15% от суммы депозита.</p>
+                                <p> <span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
+                                    <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота составляет  <span>15 дней </span>при доходности
+                                    <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
+                                    от данного BBI-бота на  <span>0.05%</span>. Тело депозита возвращается после окончания срока
+                                    депозита. Чистая прибыль составляет  <span>15%</span> от суммы депозита.</p>
                                 <div class="upgrade">
                                     <div><a href="">Подключиться</a></div>
                                 </div>
@@ -152,11 +155,11 @@
                                     class="cardName">TEST</span>
                             </div>
                             <div class="itemsContent">
-                                <p>BBI-бот «TEST» имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
-                                    5$ до 50$. Срок работы депозита у данного BBI-бота составляет 15 дней при доходности
-                                    1% в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
-                                    от данного BBI-бота на 0.05%. Тело депозита возвращается после окончания срока
-                                    депозита. Чистая прибыль составляет 15% от суммы депозита.</p>
+                                <p> <span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
+                                    <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота составляет  <span>15 дней </span>при доходности
+                                    <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
+                                    от данного BBI-бота на  <span>0.05%</span>. Тело депозита возвращается после окончания срока
+                                    депозита. Чистая прибыль составляет  <span>15%</span> от суммы депозита.</p>
                                 <div class="upgrade">
                                     <div><a href="">Подключиться</a></div>
                                 </div>
@@ -166,7 +169,7 @@
                 </div>
             </div>
         </div>
-        <div class="payments">
+        <div class="payments paymentsMark">
             <div class="container">
                 <ul class="payItems">
                     <li><img src="img/png/pay1.png" alt="perfect money"></li>
@@ -210,33 +213,33 @@
                         <li>
                             <span class="icon-telegram row2"></span><span
                                 class="footerInfoTitle row2">Support team:<br></span>
-                            <span class="footerInfo">@Business_Bot_Incubator</span>
+                            <a href="#" class="footerInfo">@Business_Bot_Incubator</a>
                         </li>
                         <li>
                             <span class="icon-mail-envelope-closed row2"></span><span
                                 class="footerInfoTitle row2">E-mail:<br></span>
-                            <span class="footerInfo">support@bbi.world</span>
+                            <a href="#" class="footerInfo">support@bbi.world</a>
                         </li>
                         <li>
                             <span class="icon-vk row2"></span><span
                                 class="footerInfoTitle row2">Vkontakte:<br></span>
-                            <span class="footerInfo">business_bot_incubator</span>
+                            <a href="#" class="footerInfo">business_bot_incubator</a>
                         </li>
                     </ul>
                     <ul>
                         <li>
                             <span class="icon-telegram row3"></span><span
                                 class="footerInfoTitle row3">BBI CHAT RUS:<br></span>
-                            <span class="footerInfo">telegram_ row3bbi_chat_rus</span>
+                            <a href="#" class="footerInfo">telegram_ row3bbi_chat_rus</a>
                         </li>
                         <li>
                             <span class="icon-telegram row3"></span><span
                                 class="footerInfoTitle row3">BBI CHAT ENG:<br></span>
-                            <span class="footerInfo">telegram_bbi_chat_eng</span>
+                            <a href="#" class="footerInfo">telegram_bbi_chat_eng</a>
                         </li>
                         <li>
                             <span class="icon-telegram row3"></span><span class="footerInfoTitle row3">BBI CHAT ХИНДИ (हिन्दी चैट):<br></span>
-                            <span class="footerInfo">telegram_bbi_chat_eng</span>
+                            <a href="#" class="footerInfo">telegram_bbi_chat_eng</a>
                         </li>
                     </ul>
                 </div>

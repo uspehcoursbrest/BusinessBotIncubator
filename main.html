@@ -5,8 +5,12 @@
     <title>BBI</title>
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css">
     <link rel="stylesheet" href="css/style.css">
+
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -29,10 +33,12 @@
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
                 <div class="langConnect">
-                    <div class="lang newsHeader">
-                        <div class="langitem "><span>EN</span></div>
-                        <div class="langitem "><span>CH</span></div>
-                        <div class="langitem activelang"><span>RU</span></div>
+                    <div class="lang">
+                        <div class="langitem activelang"><a>RU</a></div>
+                        <div id="slideDown">
+                            <div class="langitem ch"><a>CH</a></div>
+                            <div class="langitem en"><a>EN</a></div>
+                        </div>
                     </div>
                     <div class="connect">
                         <span class="icon-telegram"></span><a href="#">Подключиться</a>
@@ -174,7 +180,9 @@
         </div>
         <div class="calcFooter">
             <div class="container">
-                <div class="sumChange"></div>
+                <div class="sumChange depCalc">
+                    <input type="text" id="depCalc" name="calc">
+                </div>
                 <div class="connectWhite">
                     <div class="connectWrapper"><span class="icon-telegram"></span><a href="">Подключиться</a></div>
                 </div>
@@ -276,13 +284,13 @@
                             <a href="#">Подробнее ></a></p>
                         <span class="yourRobot"><span class="icon-robot"></span>Ваш бот BBI</span></div>
                 </li>
-                <li class="item_news cfix ">
-                    <div class="newsHeader">
+                <li class="item_news cfix">
+                    <div class="newsHeader active cfix">
                         <div class="date"><span class="day">07</span><span class="month">Ноя</span></div>
                         <div class="newsHeaderTitle"><h3>Новый бот BIT. Партнерская программа.</h3>
                             <span class="yourRobot"><span class="icon-robot"></span>Ваш бот BBI</span></div>
                     </div>
-                    <div class="newsContent active">
+                    <div class="newsContent">
                         <p>Сегодня совместными усилиями Боты завершили все части и наброски программных кодов, в
                             течении
                             их напряженной работы проявилось что-то нечто яркого цвета, а в итоге объединения
@@ -290,7 +298,7 @@
                             кода воссоздался некто. <a href="#">Подробнее ></a></p>
                     </div>
                 </li>
-                <li class="item_news cfix ">
+                <li class="item_news cfix">
                     <div class="newsHeader cfix">
                         <div class="date"><span class="day">02</span><span class="month">Ноя</span></div>
                         <div class="newsHeaderTitle"><h3>Ссылки.Чат Eng.Раздел</h3>
@@ -304,7 +312,7 @@
                             кода воссоздался некто. <a href="#">Подробнее ></a></p>
                     </div>
                 </li>
-                <li class="item_news">
+                <li class="item_news cfix">
                     <div class="newsHeader cfix">
                         <div class="date"><span class="day">31</span><span class="month">Ноя</span></div>
                         <div class="newsHeaderTitle"><h3>Business Bot Incubator</h3>
@@ -367,33 +375,33 @@
                         <li>
                             <span class="icon-telegram row2"></span><span
                                 class="footerInfoTitle row2">Support team:<br></span>
-                            <span class="footerInfo">@Business_Bot_Incubator</span>
+                            <a href="#" class="footerInfo">@Business_Bot_Incubator</a>
                         </li>
                         <li>
                             <span class="icon-mail-envelope-closed row2"></span><span
                                 class="footerInfoTitle row2">E-mail:<br></span>
-                            <span class="footerInfo">support@bbi.world</span>
+                            <a href="#" class="footerInfo">support@bbi.world</a>
                         </li>
                         <li>
                             <span class="icon-vk row2"></span><span
                                 class="footerInfoTitle row2">Vkontakte:<br></span>
-                            <span class="footerInfo">business_bot_incubator</span>
+                            <a href="#" class="footerInfo">business_bot_incubator</a>
                         </li>
                     </ul>
                     <ul>
                         <li>
                             <span class="icon-telegram row3"></span><span
                                 class="footerInfoTitle row3">BBI CHAT RUS:<br></span>
-                            <span class="footerInfo">telegram_ row3bbi_chat_rus</span>
+                            <a href="#" class="footerInfo">telegram_ row3bbi_chat_rus</a>
                         </li>
                         <li>
                             <span class="icon-telegram row3"></span><span
                                 class="footerInfoTitle row3">BBI CHAT ENG:<br></span>
-                            <span class="footerInfo">telegram_bbi_chat_eng</span>
+                            <a href="#" class="footerInfo">telegram_bbi_chat_eng</a>
                         </li>
                         <li>
                             <span class="icon-telegram row3"></span><span class="footerInfoTitle row3">BBI CHAT ХИНДИ (हिन्दी चैट):<br></span>
-                            <span class="footerInfo">telegram_bbi_chat_eng</span>
+                            <a href="#" class="footerInfo">telegram_bbi_chat_eng</a>
                         </li>
                     </ul>
                 </div>
