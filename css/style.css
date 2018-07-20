@@ -169,9 +169,11 @@ header .logo {
     bottom: 0;
     right: 0;
 }
-#slideDown{
+
+#slideDown {
     display: none;
 }
+
 .lang {
     width: 97px;
     height: 33px;
@@ -2366,7 +2368,8 @@ footer .menu {
     top: 22px !important;
 
 }
-.irs-slider:after{
+
+.irs-slider:after {
     position: absolute;
     left: -10px;
     top: -10px;
@@ -2385,4 +2388,79 @@ footer .menu {
 .irs-grid-pol {
     height: 18px;
     background: #4e566e;
+}
+
+
+.newsListSite {
+    display: block;
+    font-family: Roboto;
+}
+
+.newsListSite p {
+    color: #6e7383;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.newsListSite p + p {
+    padding-top: 30px;
+}
+
+.newsListSite .newsContent {
+    padding: 30px 0 0 30px;
+    background-color: #FFFFFF;
+}
+.newsListSite .newsHeader{
+    border: 1px solid #cfd7dd;
+}
+.newsListSite .item_news+.item_news{
+    margin-top: 50px;
+}
+.newsListSite li:first-child .newsContent {
+    min-height: 210px;
+}
+
+.newsListSite li:nth-child(2) .newsContent {
+    min-height: 300px;
+}
+
+.newsListSite li:nth-child(3) .newsContent {
+    min-height: 300px;
+}
+
+.newsListSite li:nth-child(4) .newsContent {
+    min-height: 120px;
+}
+
+.telegram {
+    float: left;
+    padding: 0 30px 0 0;
+}
+.navPages {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 75px auto 124px;
+    width: 250px;
+
+}
+.navPages li{
+    background-color: #fff;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #d2d9df;
+}
+.navPages .pagesArrows{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#50bdef+0,8061dc+100 */
+    background: rgb(80,189,239); /* Old browsers */
+    background: -moz-linear-gradient(122deg, rgba(80,189,239,1) 0%, rgba(128,97,220,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(122deg, rgba(80,189,239,1) 0%,rgba(128,97,220,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(122deg, rgba(80,189,239,1) 0%,rgba(128,97,220,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50bdef', endColorstr='#8061dc',GradientType=1 ); /* IE6-9 */
+    color: #FFFFFF;
 }
