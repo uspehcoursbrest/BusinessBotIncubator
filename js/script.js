@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 // аккордион новостей
-    var mainAccord = $('.item_news');
+    var mainAccord = $('.news .item_news');
     mainAccord.find('.newsHeader:not(.active)').siblings('div').stop().slideUp();
     mainAccord.find('.newsHeader').on('click', function () {
         $('.newsHeader').removeClass('active');
@@ -18,7 +18,7 @@ $(document).ready(function () {
         $(this).addClass('active');
         accordFaq.find('span').css({color: '#ffffff'})
         accordFaq.find('.questionItem:not(.active)').css({background: '#ffffff'});
-        accordFaq.find('.questionItem:not(.active)').find('span').css({color: 'inherit'})
+        accordFaq.find('.questionItem:not(.active)').find('span').css({color: 'inherit'});
         accordFaq.find('.questionItem:not(.active)').siblings('.answer').stop().slideUp();
         accordFaq.find('.questionItem:not(.active)').find('.questionMark').css({background: 'linear-gradient(122deg, rgba(80,189,239,1) 0%,rgba(128,97,220,1) 100%)'});
         accordFaq.find('.questionItem.active').siblings('.answer').stop().slideDown();
@@ -60,12 +60,23 @@ $(document).ready(function () {
             from: val
         });
     });
-// Языr
+
+//Языr
     $( ".activelang" ).click(function() {
-        $( "#slideDown" ).slideToggle( function() {
+        $( "#slideDown" ).stop().slideToggle( function() {
         });
     });
+//Табы
+    $('#tabs').tabs()
+    document.getElementById("profit").innerHTML = '122.56$';
 
-
+    $(".activeList").click(function() {
+        $(this).siblings("li").slideToggle( function() {
+        });
+    });
+    $(".activeBot").click(function() {
+        $(this).siblings("li").stop().slideToggle( function() {
+        });
+    });
 });
 
