@@ -5,9 +5,12 @@
     <title>Marketing</title>
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
+
     <link rel="stylesheet" href="css/style.css">
 
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 
@@ -84,84 +87,316 @@
                                 качестве бонуса, которая будет выплачена участнику одним платежом.</p>
                         </li>
                     </ul>
-                    <ul class="lineItems">
-                        <li class="line">
-                            <a href=""><span class="firstLine">Линия</span>
-                                <span class="secondLine">Прибыли</span></a>
-                        </li>
-                        <li class="line">
-                            <a href=""><span class="firstLine">Линия</span>
-                                <span class="secondLine">Стабильности</span></a>
-                        </li>
-                        <li class="line">
-                            <a href=""><span class="firstLine">Линия</span>
-                                <span class="secondLine">Бесконечности</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="ratesInfo">
-            <div class="ratesEdge">
-                <div class="container">
-                    <div class="cardsWrapper">
-                        <div class="card">
-                            <div class="cardHeader"><span class="icon-robot"></span><span
-                                    class="cardName">TEST</span>
-                            </div>
-                            <div class="itemsContent">
-                                <p><span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
-                                    <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота составляет <span>15 дней</span> при доходности
-                                    <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
-                                    от данного BBI-бота на  <span>0.05%</span>. Тело депозита возвращается после окончания срока
-                                    депозита. Чистая прибыль составляет  <span>15%</span> от суммы депозита.</p>
-                                <div class="upgrade">
-                                    <div><a href="">Подключиться</a></div>
+                    <div id="tabs">
+                        <ul class="lineItems">
+                            <li class="line">
+                                <a href="#tabs-1"><span class="firstLine">Линия</span>
+                                    <span class="secondLine">Прибыли</span></a>
+                            </li>
+                            <li class="line">
+                                <a href="#tabs-2"><span class="firstLine">Линия</span>
+                                    <span class="secondLine">Стабильности</span></a>
+                            </li>
+                            <li class="line">
+                                <a href="#tabs-3"><span class="firstLine">Линия</span>
+                                    <span class="secondLine">Бесконечности</span></a>
+                            </li>
+                        </ul>
+                        <div class="ratesWrapper">
+                            <div class="ratesEdge container">
+                                <div class="cardsWrapper" id="tabs-1">
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">ULTIMATE</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «ULTIMATE» </span>имеет низкий порог инвестирования,
+                                                принимая инвестиции в
+                                                диапазоне от
+                                                <span>100$ до 500$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней</span>
+                                                при доходности
+                                                <span>3%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.50%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>20%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">TEST</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней </span>при
+                                                доходности
+                                                <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.05%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>15%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">POWER</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «POWER»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>51$ до 100$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней</span>
+                                                при доходности
+                                                <span>2%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.20%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>15%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">BIT</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «BIT»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>10$ до 200$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней </span>при
+                                                доходности
+                                                <span>4%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.20%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>25%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cardHeader"><span class="icon-robot"></span><span
-                                    class="cardName">TEST</span>
-                            </div>
-                            <div class="itemsContent">
-                                <p> <span>BBI-бот «TEST» </span>имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
-                                    <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота составляет  <span>15 дней</span> при доходности
-                                    <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
-                                    от данного BBI-бота на  <span>0.05%</span>. Тело депозита возвращается после окончания срока
-                                    депозита. Чистая прибыль составляет  <span>15%</span> от суммы депозита.</p>
-                                <div class="upgrade">
-                                    <div><a href="">Подключиться</a></div>
+                                <div class="cardsWrapper" id="tabs-2">
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">POWER</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «POWER»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>51$ до 100$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней</span>
+                                                при доходности
+                                                <span>2%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.20%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>15%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">ULTIMATE</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «ULTIMATE» </span>имеет низкий порог инвестирования,
+                                                принимая инвестиции в
+                                                диапазоне от
+                                                <span>100$ до 500$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней</span>
+                                                при доходности
+                                                <span>3%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.50%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>20%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">BIT</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «BIT»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>10$ до 200$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней </span>при
+                                                доходности
+                                                <span>4%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.20%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>25%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">TEST</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней </span>при
+                                                доходности
+                                                <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.05%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>15%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cardHeader"><span class="icon-robot"></span><span
-                                    class="cardName">TEST</span>
-                            </div>
-                            <div class="itemsContent">
-                                <p> <span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
-                                    <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота составляет  <span>15 дней </span>при доходности
-                                    <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
-                                    от данного BBI-бота на  <span>0.05%</span>. Тело депозита возвращается после окончания срока
-                                    депозита. Чистая прибыль составляет  <span>15%</span> от суммы депозита.</p>
-                                <div class="upgrade">
-                                    <div><a href="">Подключиться</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cardHeader"><span class="icon-robot"></span><span
-                                    class="cardName">TEST</span>
-                            </div>
-                            <div class="itemsContent">
-                                <p> <span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая инвестиции в диапазоне от
-                                    <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота составляет  <span>15 дней </span>при доходности
-                                    <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает каждую выводимую сумму
-                                    от данного BBI-бота на  <span>0.05%</span>. Тело депозита возвращается после окончания срока
-                                    депозита. Чистая прибыль составляет  <span>15%</span> от суммы депозита.</p>
-                                <div class="upgrade">
-                                    <div><a href="">Подключиться</a></div>
+                                <div class="cardsWrapper" id="tabs-3">
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">TEST</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «TEST»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>5$ до 50$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней </span>при
+                                                доходности
+                                                <span>1%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.05%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>15%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">POWER</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «POWER»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>51$ до 100$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней</span>
+                                                при доходности
+                                                <span>2%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.20%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>15%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">ULTIMATE</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «ULTIMATE» </span>имеет низкий порог инвестирования,
+                                                принимая инвестиции в
+                                                диапазоне от
+                                                <span>100$ до 500$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней</span>
+                                                при доходности
+                                                <span>3%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.50%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>20%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cardHeader"><span class="icon-robot"></span><span
+                                                class="cardName">BIT</span>
+                                        </div>
+                                        <div class="itemsContent">
+                                            <p><span>BBI-бот «BIT»</span> имеет низкий порог инвестирования, принимая
+                                                инвестиции в
+                                                диапазоне от
+                                                <span>10$ до 200$</span>. Срок работы депозита у данного BBI-бота
+                                                составляет <span>15 дней </span>при
+                                                доходности
+                                                <span>4%</span> в сутки. Бонусный апгрейд на начальном этапе увеличивает
+                                                каждую
+                                                выводимую сумму
+                                                от данного BBI-бота на <span>0.20%</span>. Тело депозита возвращается
+                                                после
+                                                окончания срока
+                                                депозита. Чистая прибыль составляет <span>25%</span> от суммы депозита.
+                                            </p>
+                                            <div class="upgrade">
+                                                <div><a href="">Подключиться</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -169,6 +404,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="payments paymentsMark">
             <div class="container">
                 <ul class="payItems">
