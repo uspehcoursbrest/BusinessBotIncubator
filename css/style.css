@@ -673,6 +673,22 @@ h1 > span {
     background-color: #4fceff;
 }
 
+.lineItems > li.ui-tabs-active>a,
+.lineItems>li>a:hover,
+.lineItems>li>a:focus,
+.lineItems>li:focus,
+.lineItems:focus,
+.lineItems li:focus,
+.navPages > li.ui-tabs-active>a,
+.navPages>li>a:hover,
+.navPages>li>a:focus,
+.navPages>li:focus,
+.navPages:focus,
+.navPages li:focus{
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
 /*4 блока с тарифами конец*/
 
 /*Калькулятор начало*/
@@ -681,6 +697,47 @@ h1 > span {
     color: #ffffff;
     height: 669px;
     z-index: 1;
+}
+.linesListCalc li, .botsListCalc li{
+    height: 44px;
+    font-family: Roboto;
+    font-size: 17px;
+    line-height: 44px;
+    font-weight: 700;
+    width: 270px;
+    background-color: #fff;
+    color: #17203f;
+    border: 1px solid #453f87;
+    border-top: none;
+    padding-left: 40px;
+    position: relative;
+    z-index: 2;
+}
+.linesListCalc li:before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background: url("../img/png/circle.png");
+    left: 10px;
+    top: 12px;
+}
+.botsListCalc li:before{
+    height: 24px;
+    width: 17px;
+    content: '';
+    position: absolute;
+    background: url("../img/png/robotcalc.png");
+    left: 13px;
+    top: 8px;
+}
+.linesListCalc li+li, .botsListCalc li+li{
+    display: none;
+}
+.activeBot,.activeList{
+    -webkit-box-shadow: inset 0px 5px 20px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 5px 20px -6px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 5px 20px -6px rgba(0,0,0,0.75);
 }
 
 .calcFooter {
@@ -704,6 +761,7 @@ h1 > span {
     width: 570px;
     height: 529px;
     padding-top: 94px;
+    float: left;
 }
 
 .calcTitle {
@@ -765,7 +823,8 @@ h1 > span {
 .calcChangeSum {
     background-color: #1f2847;
     height: 154px;
-    margin-top: 58px;
+    width: 570px;
+    margin-top: -154px;
     padding-top: 44px;
     text-align: center;
     position: relative;
@@ -835,13 +894,15 @@ h1 > span {
 }
 
 .calculator:after {
-    background-image: url(../img/png/hand_phone.png);
+    background: url(../img/png/hand_phone.png) no-repeat right;
+    width: 1920px;
     content: '';
     position: absolute;
-    height: 612px;
-    width: 966px;
-    right: 0;
-    bottom: -19px;
+    z-index: -1;
+    left: 50%;
+    top: 0;
+    margin-left: -960px;
+    height: inherit;
 }
 
 .calculator h2 {
@@ -860,17 +921,16 @@ h1 > span {
     font-size: 21px;
     line-height: 54px;
     text-transform: uppercase;
+
 }
 
-.profit {
-    position: absolute;
-    top: 225px;
-    right: 500px;
-    z-index: 2;
+
+.profit{
+    float: right;
+    margin: 180px 50px 0 0;
     text-align: center;
-
+    width:385px
 }
-
 .calculator .profit span {
     font-size: 70px;
     line-height: 54px;
@@ -1283,6 +1343,7 @@ h1 > span {
     font-size: 15px;
     line-height: 22px;
     color: #ffffff;
+    padding-top: 16px;
 }
 
 .affItems p > span {
@@ -1293,6 +1354,7 @@ h1 > span {
 
 .affItems {
     margin-top: 22px;
+    position: relative;
 }
 
 .affItems li {
@@ -1310,17 +1372,17 @@ h1 > span {
     margin-top: 62px;
     background-color: #1f2847;
     height: 140px;
-    position: relative;
+
 }
 
-.partnerFooter:after {
+.affItems:after {
     content: '';
     position: absolute;
     height: 54px;
     width: 571px;
     background-image: url(../img/png/con_footer.png);
-    top: -40px;
-    right: 385px;
+    bottom: -63px;
+    right: 10px;
     z-index: -1;
 }
 
@@ -1864,13 +1926,13 @@ footer .menu {
     font-family: Roboto;
 }
 
-.ratesInfo .ratesEdge {
+.ratesEdge {
     height: 845px;
     background-color: #f0f4f7;
 }
 
 .marketing {
-    height: 755px;
+
     background-color: #ffffff;
     padding-top: 128px;
     position: relative;
@@ -1998,7 +2060,6 @@ footer .menu {
 .questions {
     margin-top: 65px;
 }
-
 .questLeft {
     float: left;
     margin-right: 25px;
